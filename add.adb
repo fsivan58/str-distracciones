@@ -22,7 +22,56 @@ package body add is
         null;
       end loop;
     end Background;
+
     ----------------------------------------------------------------------
+    ------------- Private Objects  
+    ----------------------------------------------------------------------
+
+    protected Medidas is
+      procedure Read_Distance (Value: out Distance_Samples_Type);
+      procedure Write_Distance (Value: in Distance_Samples_Type);
+      procedure Show_Distance;
+      procedure Read_Speed (Value: out Speed_Samples_Type);
+      procedure Write_Speed (Value: in Speed_Samples_Type);
+      procedure Show_Speed;
+    private
+      Distance: Distance_Samples_Type;
+      Speed: Speed_Samples_Type;
+    end Medidas;
+
+    protected body Medidas is
+
+      procedure Read_Distance (Value: out Distance_Samples_Type) is
+      begin
+	Value := Distance;
+      end Read_Distance;
+
+      procedure Write_Distance (Value: in Distance_Samples_Type) is
+      begin
+	Distance := Value;
+      end Write_Distance;
+
+      procedure Show_Distance is
+      begin
+	Display_Distance(Distance);
+      end Show_Distance;
+
+      procedure Read_Speed (Value: out Speed_Samples_Type) is
+      begin
+	Value := Speed;
+      end Read_Speed;
+
+      procedure Write_Speed (Value: in Speed_Samples_Type) is
+      begin
+	Speed := Value;
+      end Write_Speed;
+
+      procedure Show_Speed is
+      begin
+	Display_Speed(Speed);
+      end Show_Speed ;
+
+    end Medidas;
 
     -----------------------------------------------------------------------
     ------------- declaration of tasks 
@@ -36,7 +85,9 @@ package body add is
       pragma Priority (16);
     end Head;
 
-
+    task Display is
+      pragma Priority (10);
+    end Display;
 
     -----------------------------------------------------------------------
     ------------- body of tasks 
@@ -47,111 +98,70 @@ package body add is
     task body Distance is 
       Current_D: Distance_Samples_Type := 0;
       Current_V: Speed_Samples_Type := 0;
-      Distancia_Recomendada: float;
+      Recommended_Distance: float;
+      Current_Time: Time;
     begin
 
       Starting_Notice ("Distance");
+      Current_Time := Clock;
       Reading_Distance (Current_D);
       Display_Distance (Current_D);
       Reading_Speed (Current_V);
       Display_Speed (Current_V);
-      Distancia_Recomendada := float ((Current_V/10)**2);
-      if (float(Current_D) < Distancia_Recomendada) then 
-	Put("DISTANCIA INSEGURA"); Put_Line;
+      Recommended_Distance := float ((Current_V/10)**2);
+      if (float(Current_D) < Recommended_Distance) then 
+	Put("DISTANCIA INSEGURA");
 	Light (On);
-      elsif (Current_D < Distancia_Recomendada/2) then
-	Put("DISTANCIA IMPRUDENTE"); Put_Line;
+      elsif (float(Current_D) < float(Recommended_Distance)/float(2)) then
+	Put("DISTANCIA IMPRUDENTE");
 	Light (On);
-      elsif (Current_D < Distancia_Recomendada/3) then 
-	Put("PELIGRO DE COLISION"); Put_Line;
+      elsif (float(Current_D) < float(Recommended_Distance)/float(3)) then 
+	Put("PELIGRO DE COLISION");
 	Light (On);
-      else Put("SIN PELIGRO DE COLISION"); Put_Line; Light (Off);
+      else Put("SIN PELIGRO DE COLISION"); Light (Off);
       Finishing_Notice ("Distance");
       end if;
-      delay until Clock + Milliseconds(300);
+      delay until Current_Time + Milliseconds(1000);
      
     end Distance;
 
     task body Head is
-      Previous_H: Head_Position_Samples_Type;
-      Current_H: Head_Position_Samples_Type := (+2, -2);
+      Previous_H: HeadPosition_Samples_Type := (+2,-2);
+      Current_H: HeadPosition_Samples_Type := (+2, -2);
       Current_S: Steering_Samples_Type;
+      Current_Time: Time;
     begin
       
       Starting_Notice ("Head");
+      Current_Time := Clock;
       Previous_H := Current_H;
       Reading_HeadPosition (Current_H);
-      Reading_Steering (Surrent_S);
+      Reading_Steering (Current_S);
       if ((abs Previous_H(x) > 30 and abs Current_H(x) > 30) or
 	(abs Previous_H(y) > 30 and abs Current_H(y) > 30 and abs Current_S > 30))
       then 
-	Put("CABEZA INCLINADA"); Put_Line;
+	Put("CABEZA INCLINADA");
 	Beep(4);
-      else Put ("CABEZA RECTA"); Put_Line;
+      else Put("CABEZA RECTA");
       end if;
       Finishing_Notice ("Head");
-      delay until Clock + Milliseconds(400);
+      delay until Current_Time + Milliseconds(1000);
 
     end Head;
 
-    ----------------------------------------------------------------------
-    ------------- procedure para probar los dispositivos 
-    ----------------------------------------------------------------------
-    procedure Prueba_Dispositivos; 
-
-    Procedure Prueba_Dispositivos is
-        Current_V: Speed_Samples_Type := 0;
-        Current_H: HeadPosition_Samples_Type := (+2,-2);
-        Current_D: Distance_Samples_Type := 0;
-        Current_O: Eyes_Samples_Type := (70,70);
-        Current_E: EEG_Samples_Type := (1,1,1,1,1,1,1,1,1,1);
-        Current_S: Steering_Samples_Type := 0;
+    task body Display is
+      Current_Time: Time;
     begin
-         Starting_Notice ("Prueba_Dispositivo");
-
-         for I in 1..120 loop
-         -- Prueba distancia
-          --  Reading_Distance (Current_D);
-           -- Display_Distance (Current_D);
-           -- if (Current_D < 40) then Light (On); 
-                              --  else Light (Off); end if;
-
-         --Prueba velocidad
-           -- Reading_Speed (Current_V);
-           -- Display_Speed (Current_V);
-           -- if (Current_V > 110) then Beep (2); end if;
-
-         -- Prueba volante
-           -- Reading_Steering (Current_S);
-           -- Display_Steering (Current_S);
-           -- if (Current_S > 30) OR (Current_S < -30) then Light (On);
-                                                     --else Light (Off); end if;
-
-         -- Prueba Posicion de la cabeza
-           -- Reading_HeadPosition (Current_H);
-           -- Display_HeadPosition_Sample (Current_H);
-           -- if (Current_H(x) > 30) then Beep (4); end if;
-
-         -- Prueba ojos
-           -- Reading_EyesImage (Current_O);
-            --Display_Eyes_Sample (Current_O);
-
-         -- Prueba electroencefalograma
-            --Reading_Sensors (Current_E);
-            --Display_Electrodes_Sample (Current_E);
-   
-         delay until (Clock + To_time_Span(0.1));
-         end loop;
-
-         Finishing_Notice ("Prueba_Dispositivo");
-    end Prueba_Dispositivos;
-
-
+      
+      Current_Time := Clock;
+      Medidas.Show_Distance;
+      Medidas.Show_Speed;
+      delay until Current_Time + Milliseconds(1000);
+      
+    end Display;
 
 begin
    Starting_Notice ("Programa Principal");
-  -- Prueba_Dispositivos;
-
    Finishing_Notice ("Programa Principal");
 end add;
 
