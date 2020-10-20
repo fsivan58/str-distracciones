@@ -29,10 +29,10 @@ package body add is
 
     protected Medidas is
       procedure Read_Distance (Value: out Distance_Samples_Type);
-      procedure Write_Distance (Value: in Distance_Samples_Type);
+      procedure Write_Distance; 
       procedure Show_Distance;
       procedure Read_Speed (Value: out Speed_Samples_Type);
-      procedure Write_Speed (Value: in Speed_Samples_Type);
+      procedure Write_Speed;
       procedure Show_Speed;
     private
       Distance: Distance_Samples_Type;
@@ -46,9 +46,9 @@ package body add is
 	Value := Distance;
       end Read_Distance;
 
-      procedure Write_Distance (Value: in Distance_Samples_Type) is
+      procedure Write_Distance is
       begin
-	Distance := Value;
+	Reading_Distance(Distance);
       end Write_Distance;
 
       procedure Show_Distance is
@@ -61,9 +61,9 @@ package body add is
 	Value := Speed;
       end Read_Speed;
 
-      procedure Write_Speed (Value: in Speed_Samples_Type) is
+      procedure Write_Speed is
       begin
-	Speed := Value;
+	Reading_Speed(Speed);
       end Write_Speed;
 
       procedure Show_Speed is
@@ -93,35 +93,33 @@ package body add is
     ------------- body of tasks 
     -----------------------------------------------------------------------
 
-    -- Aqui se escriben los cuerpos de las tareas 
-
     task body Distance is 
       Current_D: Distance_Samples_Type := 0;
       Current_V: Speed_Samples_Type := 0;
       Recommended_Distance: float;
-      Current_Time: Time;
+      Siguiente_Instante: Time;
     begin
-
-      Starting_Notice ("Distance");
-      Current_Time := Clock;
-      Reading_Distance (Current_D);
-      Display_Distance (Current_D);
-      Reading_Speed (Current_V);
-      Display_Speed (Current_V);
-      Recommended_Distance := float ((Current_V/10)**2);
-      if (float(Current_D) < Recommended_Distance) then 
-	Put("DISTANCIA INSEGURA");
-	Light (On);
-      elsif (float(Current_D) < float(Recommended_Distance)/float(2)) then
-	Put("DISTANCIA IMPRUDENTE");
-	Light (On);
-      elsif (float(Current_D) < float(Recommended_Distance)/float(3)) then 
-	Put("PELIGRO DE COLISION");
-	Light (On);
-      else Put("SIN PELIGRO DE COLISION"); Light (Off);
-      Finishing_Notice ("Distance");
-      end if;
-      delay until Current_Time + Milliseconds(1000);
+	-- Guardar en sintomas los valores para cada caso del if
+        Siguiente_Instante := Clock + Milliseconds(300);
+	for i in 1..20 loop
+	      Starting_Notice ("Distance");
+	      Medidas.Write_Distance;
+	      Medidas.Read_Distance (Current_D);
+	      Medidas.Write_Speed;
+	      Medidas.Read_Speed (Current_V);
+	      Recommended_Distance := float ((Current_V/10)**2);
+	      if (float(Current_D) < Recommended_Distance) then 
+		Light (On);
+	      elsif (float(Current_D) < float(Recommended_Distance)/float(2)) then
+		Light (On);
+	      elsif (float(Current_D) < float(Recommended_Distance)/float(3)) then 
+		Light (On);
+	      else Light (Off);
+	      Finishing_Notice ("Distance");
+	      end if;
+	      delay until Siguiente_Instante;
+	      Siguiente_Instante := Siguiente_Instante + Milliseconds(300);
+	end loop;
      
     end Distance;
 
@@ -129,34 +127,39 @@ package body add is
       Previous_H: HeadPosition_Samples_Type := (+2,-2);
       Current_H: HeadPosition_Samples_Type := (+2, -2);
       Current_S: Steering_Samples_Type;
-      Current_Time: Time;
+      Siguiente_Instante: Time;
     begin
       
-      Starting_Notice ("Head");
-      Current_Time := Clock;
-      Previous_H := Current_H;
-      Reading_HeadPosition (Current_H);
-      Reading_Steering (Current_S);
-      if ((abs Previous_H(x) > 30 and abs Current_H(x) > 30) or
-	(abs Previous_H(y) > 30 and abs Current_H(y) > 30 and abs Current_S > 30))
-      then 
-	Put("CABEZA INCLINADA");
-	Beep(4);
-      else Put("CABEZA RECTA");
-      end if;
-      Finishing_Notice ("Head");
-      delay until Current_Time + Milliseconds(1000);
+	-- Guardar en sintomas los valores para cada caso del if
+        Siguiente_Instante := Clock + Milliseconds(400);
+	for i in 1..20 loop
+	      Starting_Notice ("Head");
+	      Previous_H := Current_H;
+	      Reading_HeadPosition (Current_H);
+	      Reading_Steering (Current_S);
+	      if ((abs Previous_H(x) > 30 and abs Current_H(x) > 30) or
+		(abs Previous_H(y) > 30 and abs Current_H(y) > 30 and abs Current_S > 30))
+	      then 
+		Beep(4);
+	      end if;
+	      Finishing_Notice ("Head");
+	      delay until Siguiente_Instante;
+	      Siguiente_Instante := Siguiente_Instante + Milliseconds(400);
+	end loop;
 
     end Head;
 
     task body Display is
-      Current_Time: Time;
+      Siguiente_Instante: Time;
     begin
       
-      Current_Time := Clock;
-      Medidas.Show_Distance;
-      Medidas.Show_Speed;
-      delay until Current_Time + Milliseconds(1000);
+        Siguiente_Instante := Clock + Milliseconds(1000);
+	for i in 1..20 loop
+	      Medidas.Show_Distance;
+	      Medidas.Show_Speed;
+	      delay until Siguiente_Instante;
+	      Siguiente_Instante := Siguiente_Instante + Milliseconds(1000);
+	end loop;
       
     end Display;
 
