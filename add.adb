@@ -73,6 +73,55 @@ package body add is
 
     end Medidas;
 
+    protected Symptoms is
+      procedure Write_Head_Symptom (Value: in Boolean);
+      procedure Write_Distancia_Insegura (Value: in Boolean);
+      procedure Write_Distancia_Imprudente (Value: in Boolean);
+      procedure Write_Peligro_Colision (Value: in Boolean);
+      procedure Read_HeadPosition (Value: out HeadPosition_Samples_Type);
+      procedure Write_HeadPosition;
+    private
+      Head_Symptom: Boolean := False;
+      Distancia_Insegura: Boolean := False;
+      Distancia_Imprudente: Boolean := False;
+      Peligro_Colision: Boolean := False;
+      HeadPosition: HeadPosition_Samples_Type := (+2, -2);
+    end Symptoms;
+
+    protected body Symptoms is
+
+      procedure Write_Head_Symptom (Value: in Boolean) is
+      begin
+	Head_Symptom := Value;
+      end Write_Head_Symptom;
+      
+      procedure Write_Distancia_Insegura (Value: in Boolean) is
+      begin
+	Distancia_Insegura := Value;
+      end Write_Distancia_Insegura;
+
+      procedure Write_Distancia_Imprudente (Value: in Boolean) is
+      begin
+	Distancia_Imprudente := Value;
+      end Write_Distancia_Imprudente;
+
+      procedure Write_Peligro_Colision (Value: in Boolean) is
+      begin
+	Peligro_Colision := Value;
+      end Write_Peligro_Colision;
+
+      procedure Read_HeadPosition (Value: out HeadPosition_Samples_Type) is
+      begin
+	Value := HeadPosition;
+      end Read_HeadPosition; 
+
+      procedure Write_HeadPosition is
+      begin
+	Reading_HeadPosition(HeadPosition);
+      end Write_HeadPosition; 
+
+    end Symptoms;
+
     -----------------------------------------------------------------------
     ------------- declaration of tasks 
     -----------------------------------------------------------------------
@@ -99,7 +148,6 @@ package body add is
       Recommended_Distance: float;
       Siguiente_Instante: Time;
     begin
-	-- Guardar en sintomas los valores para cada caso del if
         Siguiente_Instante := Clock + Milliseconds(300);
 	for i in 1..20 loop
 	      Starting_Notice ("Distance");
@@ -108,15 +156,22 @@ package body add is
 	      Medidas.Write_Speed;
 	      Medidas.Read_Speed (Current_V);
 	      Recommended_Distance := float ((Current_V/10)**2);
-	      if (float(Current_D) < Recommended_Distance) then 
+	      if (float(Current_D) < Recommended_Distance) then
+		Symptoms.Write_Distancia_Insegura (True);
 		Light (On);
 	      elsif (float(Current_D) < float(Recommended_Distance)/float(2)) then
+		Symptoms.Write_Distancia_Imprudente (True);
 		Light (On);
 	      elsif (float(Current_D) < float(Recommended_Distance)/float(3)) then 
+		Symptoms.Peligro_Colision (True);
 		Light (On);
-	      else Light (Off);
-	      Finishing_Notice ("Distance");
+	      else
+		Light (Off);
+		Symptoms.Write_Distancia_Insegura (False);
+		Symptoms.Write_Distancia_Imprudente (False);
+		Symptoms.Peligro_Colision (False);
 	      end if;
+	      Finishing_Notice ("Distance");
 	      delay until Siguiente_Instante;
 	      Siguiente_Instante := Siguiente_Instante + Milliseconds(300);
 	end loop;
@@ -135,12 +190,14 @@ package body add is
 	for i in 1..20 loop
 	      Starting_Notice ("Head");
 	      Previous_H := Current_H;
-	      Reading_HeadPosition (Current_H);
+	      Read_HeadPosition (Current_H);
 	      Reading_Steering (Current_S);
 	      if ((abs Previous_H(x) > 30 and abs Current_H(x) > 30) or
 		(abs Previous_H(y) > 30 and abs Current_H(y) > 30 and abs Current_S > 30))
 	      then 
+		Symptoms.Write_Head_Symptom (True);
 		Beep(4);
+	      else Symptoms.Write_Head_Symptom (False);
 	      end if;
 	      Finishing_Notice ("Head");
 	      delay until Siguiente_Instante;
