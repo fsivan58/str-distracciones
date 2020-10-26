@@ -137,9 +137,9 @@ package devices is
     procedure Activate_Automatic_Driving;
     -- It activates the automatic driving system 
 	
-	---------------------------------------------------------------------
-	procedure Activate_Brake;
-	-- It activates the brake 
+    ---------------------------------------------------------------------
+    procedure Activate_Brake;
+    -- It activates the brake 
 
 
     ---------------------------------------------------------------------
