@@ -13,7 +13,7 @@ package body head_task is
         Current_S: Steering_Samples_Type;
         Siguiente_Instante: Time;
         begin
-            Siguiente_Instante := Clock + Milliseconds(400);
+            Siguiente_Instante := Big_Bang + Milliseconds(400);
             for i in 1..20 loop
                 Starting_Notice ("Head");
                 Previous_H := Current_H;

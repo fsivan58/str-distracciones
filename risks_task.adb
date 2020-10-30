@@ -16,7 +16,7 @@ package body Risks_Task is
 		Speed: Speed_Samples_Type := 0;
 		Siguiente_Instante: Time;
 		begin
-			Siguiente_Instante := Clock + Milliseconds(150);
+			Siguiente_Instante := Big_Bang + Milliseconds(150);
 			for i in 1..40 loop
                 delay until Siguiente_Instante;
 				Siguiente_Instante := Clock + Milliseconds(150);
