@@ -5,9 +5,8 @@ with System; use System;
 
 with Tools; use Tools;
 with Devices; use Devices;
-with Distance_Task; use Distance_Task;
-with head_task;
-with display_task;
+with Driver; use Driver;
+with State; use State;
 
 
 -- Packages needed to generate pulse interrupts       
