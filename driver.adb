@@ -1,5 +1,7 @@
 with Kernel.Serial_Output; use Kernel.Serial_Output;
 with Ada.Real_Time; use Ada.Real_Time;
+with ada.strings.unbounded; use ada.strings.unbounded;
+with ada.strings.unbounded.text_io; use ada.strings.unbounded.text_io;
 with System; use System;
 
 with Tools; use Tools;
@@ -50,6 +52,7 @@ package body Driver is
     begin
         Siguiente_Instante := Big_Bang + Milliseconds(350);
         for i in 1..23 loop
+            Starting_Notice ("Steering");
             Previous_S := Current_S;
             Symptoms.Read_Steering (Current_S);
             Measures.Read_Speed (Speed);
@@ -57,6 +60,7 @@ package body Driver is
                 Symptoms.Write_Steering_Symptom (True);
             else Symptoms.Write_Steering_Symptom (False);
             end if;
+            Finishing_Notice ("Steering");
             delay until Siguiente_Instante;
             Siguiente_Instante := Siguiente_Instante + Milliseconds(350);
         end loop;
@@ -157,6 +161,15 @@ package body Driver is
         begin
             Value := Steering;
         end Read_Steering;
+
+        procedure Show_Symptoms is
+        begin
+            if Head_Symptom then Display_Symptom (To_Unbounded_String("CABEZA INCLINADA")); end if;
+            if Steering_Symptom then Display_Symptom (To_Unbounded_String("VOLANTAZO")); end if;
+            if Distancia_Insegura then Display_Symptom (To_Unbounded_String("DISTANCIA INSEGURA")); end if;
+            if Distancia_Imprudente then Display_Symptom (To_Unbounded_String("DISTANCIA IMPRUDENTE")); end if;
+            if Peligro_Colision then Display_Symptom (To_Unbounded_String("PELIGRO COLISION")); end if;
+        end Show_Symptoms;
     end Symptoms;
 
     protected body Measures is

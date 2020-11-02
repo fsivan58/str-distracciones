@@ -17,14 +17,14 @@ package body add is
 
     procedure Background is
     begin
-      loop
-        null;
-      end loop;
+        loop
+            null;
+        end loop;
     end Background;
 
 begin
-   Starting_Notice ("Programa Principal");
-   Finishing_Notice ("Programa Principal");
+    Starting_Notice ("Programa Principal");
+    Finishing_Notice ("Programa Principal");
 end add;
 
 

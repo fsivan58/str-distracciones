@@ -30,6 +30,7 @@ package Driver is
         procedure Read_HeadPosition (Value: out HeadPosition_Samples_Type);
         procedure Write_Steering;
         procedure Read_Steering (Value: out Steering_Samples_Type);
+        procedure Show_Symptoms;
     private
         Head_Symptom: Boolean := False;
         Steering_Symptom: Boolean := False;

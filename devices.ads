@@ -1,6 +1,8 @@
 
 
 with Ada.Real_Time; use Ada.Real_Time;
+with ada.strings.unbounded; use ada.strings.unbounded;
+with ada.strings.unbounded.text_io; use ada.strings.unbounded.text_io;
 
 package devices is
 
@@ -118,6 +120,10 @@ package devices is
     --------------------------------------------------------------------
     procedure Display_HeadPosition_Sample (H: HeadPosition_Samples_Type);
     -- It displays the angle of the head position in both axis (x and y) 
+
+    ---------------------------------------------------------------------
+    procedure Display_Symptom (Symptom: in Unbounded_String);
+    -- It displays the symptom passed by parameter
 
     ---------------------------------------------------------------------
     procedure Display_Cronometro (Origen: Ada.Real_Time.Time; Hora: Ada.Real_Time.Time);

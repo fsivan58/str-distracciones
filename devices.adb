@@ -1,6 +1,8 @@
 -- Error in samples has been corrcted
 
 with Kernel.Serial_Output; use Kernel.Serial_Output;
+with ada.strings.unbounded; use ada.strings.unbounded;
+with ada.strings.unbounded.text_io; use ada.strings.unbounded.text_io;
 with System; use System;
 with tools; use tools;
 
@@ -370,6 +372,15 @@ begin
 
    Execution_Time (WCET_Display);
 end Display_Eyes_Sample;
+-----------------------------------------------------------------------------
+procedure Display_Symptom (Symptom: in Unbounded_String) is
+begin
+   Current_Time (Big_Bang);
+   Put ("............# ");
+   Put ("Symptom: ");
+   Put (Symptom);
+   Execution_Time (WCET_Display);
+end Display_Symptom;
 -----------------------------------------------------------------------------
 procedure Display_Cronometro (Origen : Ada.Real_Time.Time; Hora: Ada.Real_Time.Time ) is
   type Crono is delta 0.1 range 0.0..100.0;

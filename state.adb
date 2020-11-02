@@ -14,8 +14,11 @@ package body State is
     begin
         Siguiente_Instante := Clock + Milliseconds(1000);
         for i in 1..8 loop
+            Starting_Notice ("Display");
             Measures.Show_Distance;
             Measures.Show_Speed;
+            Symptoms.Show_Symptoms;
+            Finishing_Notice ("Display");
             delay until Siguiente_Instante;
             Siguiente_Instante := Siguiente_Instante + Milliseconds(1000);
         end loop;
@@ -32,6 +35,7 @@ package body State is
         Siguiente_Instante := Big_Bang + Milliseconds(150);
         for i in 1..53 loop
             delay until Siguiente_Instante;
+            Starting_Notice ("Risks");
             Siguiente_Instante := Clock + Milliseconds(150);
             Symptoms.Read_Head_Symptom (Head_Symptom);
             Symptoms.Read_Distancia_Insegura (Distancia_Insegura);
@@ -54,6 +58,7 @@ package body State is
                 Activate_Brake;
             else Light (Off);
             end if;
+            Finishing_Notice ("Risks");
         end loop;
     end Risks;
 
