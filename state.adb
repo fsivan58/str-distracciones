@@ -26,6 +26,7 @@ package body State is
 
     task body Risks is
 		Head_Symptom: Boolean := False;
+        Volantazo: Boolean := False;
 		Distancia_Insegura: Boolean := False;
 		Distancia_Imprudente: Boolean := False;
 		Peligro_Colision: Boolean := False;
@@ -37,12 +38,15 @@ package body State is
             delay until Siguiente_Instante;
             Siguiente_Instante := Clock + Milliseconds(150);
             Starting_Notice ("Risks");
+            Symptoms.Read_Steering_Symptom (Volantazo);
             Symptoms.Read_Head_Symptom (Head_Symptom);
             Symptoms.Read_Distancia_Insegura (Distancia_Insegura);
             Symptoms.Read_Distancia_Imprudente (Distancia_Imprudente);
             Symptoms.Read_Peligro_Colision (Peligro_Colision);
             Measures.Read_Speed (Speed);
-            -- if solo volantazo then Beep (1);
+            if Volantazo and not Head_Symptom and not Distancia_Imprudente and not Distancia_Insegura and not Peligro_Colision then
+                Beep (1);
+            end if;
             if Head_Symptom and Speed > 70 then
                 Beep (3);
             elsif Head_Symptom then
