@@ -34,6 +34,7 @@ package body State is
 		Peligro_Colision: Boolean := False;
 		Speed: Speed_Samples_Type := 0;
 		Siguiente_Instante: Time;
+        Mode: integer := 1;
     begin
         Siguiente_Instante := Big_Bang + Milliseconds(150);
         for i in 1..53 loop
@@ -46,20 +47,21 @@ package body State is
             Symptoms.Read_Distancia_Imprudente (Distancia_Imprudente);
             Symptoms.Read_Peligro_Colision (Peligro_Colision);
             Measures.Read_Speed (Speed);
-            if Volantazo and not Head_Symptom and not Distancia_Imprudente and not Distancia_Insegura and not Peligro_Colision then
+            Operation_Mode.Read_Mode (Mode);
+            if Volantazo and Mode < 3 and not Head_Symptom and not Distancia_Imprudente and not Distancia_Insegura and not Peligro_Colision then
                 Beep (1);
             end if;
-            if Head_Symptom and Speed > 70 then
+            if Head_Symptom and Mode < 3 and Speed > 70 then
                 Beep (3);
-            elsif Head_Symptom then
+            elsif Head_Symptom and Mode < 3 then
                 Beep (2);
             end if;
-            if Distancia_Insegura then
+            if Distancia_Insegura and Mode = 1 then
                 Light (On);
-            elsif Distancia_Imprudente then
+            elsif Distancia_Imprudente and Mode = 1 then
                 Light (On);
                 Beep (4);
-            elsif Peligro_Colision and Head_Symptom then
+            elsif Peligro_Colision adn Mode < 3 and Head_Symptom then
                 Beep (5);
                 Activate_Brake;
             else Light (Off);
@@ -95,7 +97,7 @@ package body State is
         begin
             Symptoms.Read_Peligro_Colision (Peligro_Colision);
             Symptoms.Read_Head_Symptom (Head_Symptom);
-            Operation_Mode.Read_Mode (Mode);
+            Operation_Mode.Read_Mode (Mode);ç
             if Mode = 1 and not Peligro_Colision then
                 Enter := True;
             elsif Mode = 2 and not Peligro_Colision and not Head_Symptom) then
