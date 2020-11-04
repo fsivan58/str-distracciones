@@ -90,6 +90,8 @@ package body State is
             Operation_Mode.Read_Mode (Mode);
             if Mode = 3 then Operation_Mode.Write_Mode (1);
             else Operation_Mode.Write_Mode (Mode + 1); end if;
+            Put ("::::::: MODE :::::::");
+            Put (Integer'Image(Mode));
             Enter := False;
         end Change_Mode; 
         procedure Validate_Entry is
