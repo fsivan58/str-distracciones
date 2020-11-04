@@ -6,6 +6,8 @@ with System; use System;
 with Tools; use Tools;
 with Devices; use Devices;
 with Driver; use Driver;
+with Ada.Interrupts.Names;
+with Pulse_Interrupt; use Pulse_Interrupt;
 
 package body State is
 
@@ -65,6 +67,42 @@ package body State is
             Finishing_Notice ("Risks");
         end loop;
     end Risks;
+
+    protected Operation_Mode is
+        procedure Write_Mode (Value: in Boolean) is
+        begin
+            Mode := Value;
+        end Write_Mode;
+        procedure Read_Mode (Value: out Boolean) is
+        begin
+            Value := Mode;
+        end Read_Mode;
+    end Operation_Mode;
+
+    protected body Interruption_Handler is
+        entry body Change_Mode when Enter is
+            Mode: integer := Boolean;
+        begin
+            Operation_Mode.Read_Mode (Mode);
+            if Mode = 3 then Operation_Mode.Write_Mode (1);
+            else Operation_Mode.Write_Mode (Mode + 1); end if;
+            Enter := False;
+        end Change_Mode;
+        procedure Validate_Entry (Value: in Boolean)
+            Peligro_Colision: Boolean;
+            Head_Symptom: Boolean;
+            Mode: integer := Boolean;
+        begin
+            Symptoms.Read_Peligro_Colision (Peligro_Colision);
+            Symptoms.Read_Head_Symptom (Head_Symptom);
+            Operation_Mode.Read_Mode (Mode);
+            if Mode = 1 and not Peligro_Colision then
+                Enter := True;
+            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom) then
+                Enter := True;
+            else Enter := True; end if;
+        end Enter;
+    end Interruption_Handler;
 
 begin
     null;

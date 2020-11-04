@@ -8,11 +8,6 @@ with Devices; use Devices;
 with Driver; use Driver;
 with State; use State;
 
-
--- Packages needed to generate pulse interrupts       
--- with Ada.Interrupts.Names;
--- with Pulse_Interrupt; use Pulse_Interrupt;
-
 package body add is
 
     procedure Background is
