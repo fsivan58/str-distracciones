@@ -16,7 +16,8 @@ package body Driver is
         Siguiente_Instante: Time;
     begin
         Siguiente_Instante := Clock + Milliseconds(300);
-        for i in 1..27 loop
+        --for i in 1..27
+        loop
             Starting_Notice ("Distance");
             Measures.Write_Distance;
             Measures.Read_Distance (Current_D);
@@ -51,7 +52,8 @@ package body Driver is
         Siguiente_Instante: Time;
     begin
         Siguiente_Instante := Big_Bang + Milliseconds(350);
-        for i in 1..23 loop
+        --for i in 1..23
+        loop
             Starting_Notice ("Steering");
             Previous_S := Current_S;
             Symptoms.Read_Steering (Current_S);
@@ -73,7 +75,8 @@ package body Driver is
         Siguiente_Instante: Time;
     begin
         Siguiente_Instante := Big_Bang + Milliseconds(400);
-        for i in 1..20 loop
+        --for i in 1..20
+        loop
             Starting_Notice ("Head");
             Previous_H := Current_H;
             Symptoms.Read_HeadPosition (Current_H);

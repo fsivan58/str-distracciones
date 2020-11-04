@@ -1,0 +1,17 @@
+V "GNAT Lib v3.13 "
+A -g
+P
+R nnnnrnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U priorities%s		priorities.ads		38200C2F NE PK
+
+D priorities.ads	20201104171524 38200C2F
+X 1 priorities.ads
+2U9*Priorities
+4i5*Sporadic_Priority
+5i5*Risk_Priority
+6i5*Distance_Priority
+7i5*Steering_Priority
+8i5*Head_Priority
+9i5*Display_Priority
+

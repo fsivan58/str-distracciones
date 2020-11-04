@@ -1,0 +1,176 @@
+V "GNAT Lib v3.13 "
+A -g
+P LC TF
+R nnvvrnvvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
+
+U state%b		state.adb		51D84CC2 PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.interrupts%s	a-interr.adb		a-interr.ali
+W ada.interrupts.names%s  a-intnam.ads		a-intnam.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W devices%s		devices.adb		devices.ali  ED
+W driver%s		driver.adb		driver.ali  ED
+W kernel%s		kernel.ads		kernel.ali
+W kernel.serial_output%s  kernel-serial_output.adb  kernel-serial_output.ali
+W pulse_interrupt%s	pulse_interrupt.adb	pulse_interrupt.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W tools%s		tools.adb		tools.ali  ED
+
+U state%s		state.ads		501D01DC PK
+W ada%s			ada.ads			ada.ali
+W ada.interrupts%s	a-interr.adb		a-interr.ali
+W ada.interrupts.names%s  a-intnam.ads		a-intnam.ali
+W devices%s		devices.adb		devices.ali  ED
+W priorities%s		priorities.ads		priorities.ali
+W system%s		system.ads		system.ali
+W system.interrupts%s	s-interr.adb		s-interr.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.single_entry%s  s-tposen.adb  s-tposen.ali
+W system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+
+D ada.ads		20000718095948 2359F9ED
+D a-charac.ads		20000718095948 38C1E46A
+D a-chlat1.ads		20000718095948 2E99BCFF
+D a-except.ads		20000718095948 287FCF69
+D a-finali.ads		20000718095948 3F32DEEF
+D a-filico.ads		20000718095948 1DECB9AC
+D a-interr.ads		20000718095948 6619C24E
+D a-intnam.ads		20010312182047 4ACDF976
+D a-ioexce.ads		20000718095948 175CB67B
+D a-reatim.ads		20000718095948 5DBAB303
+D a-retide.ads		20000718095948 7F3C479C
+D a-stream.ads		20000718095948 5F7C277B
+D a-string.ads		20000718095948 051AEC3E
+D a-strmap.ads		20000718095948 397ADA2A
+D a-strunb.ads		20000718095948 23CE47B9
+D a-suteio.ads		20000718095948 4205D177
+D a-tags.ads		20000718095948 45EF7E4E
+D a-textio.ads		20000718095948 2D24B708
+D devices.ads		20201102114124 09EB4686
+D driver.ads		20201102110100 53001041
+D interfac.ads		20000718095948 0357E00A
+D i-cstrea.ads		20000718095948 70A316EF
+D kernel.ads		20010312182047 56BBE4F1
+D kernel-cpu_primitives.ads  20010312182047 5746D7AD
+D kernel-interrupts.ads	20010312182047 72CD7AA3
+D kernel-parameters.ads	20010312182047 0D1B8F78
+D kernel-peripherals.ads  20010312182047 089544EF
+D kernel-serial_output.ads  20010312182047 16AD38F4
+D kernel-threads.ads	20010312182047 234DAE87
+D kernel-time.ads	20010312182047 7A57ECF4
+D priorities.ads	20201104171524 38200C2F
+D pulse_interrupt.ads	20191007063732 39938A04
+D state.ads		20201104181613 2B1BB203
+D state.adb		20201104190742 4EB02151
+D system.ads		20010312182047 2AE5BAFE
+D s-exctab.ads		20000718095948 7A25F5F9
+D s-ficobl.ads		20000718095949 0C03FD47
+D s-finimp.ads		20000718095949 1C201C0F
+D s-finroo.ads		20000718095949 166D4EDA
+D s-interr.ads		20010312182047 0AE53449
+D s-osinte.ads		20010312182047 7BFC1094
+D s-parame.ads		20000718095949 25FE086A
+D s-secsta.ads		20000718095949 60A2A5CD
+D s-soflin.ads		20000718095949 006B24D7
+D s-stache.ads		20000718095949 42B57F2A
+D s-stalib.ads		20000718095949 438B3864
+D s-stoele.ads		20000718095949 131D4539
+D s-stratt.ads		20000718095949 1761725B
+D s-tasinf.ads		20000718095949 0F7BBEC5
+D s-taspri.ads		20010312182047 3235B2AC
+D s-taprop.ads		20010312182047 36F12025
+D s-taskin.ads		20000718095949 09146F23
+D s-taprob.ads		20000718095949 1D5668B3
+D s-tposen.ads		20010312182047 5865B402
+D s-tasres.ads		20000718095949 62B4C0AB
+D s-tarest.ads		20000718095949 1D177686
+D s-unstyp.ads		20000718095949 78AFB91D
+D tools.ads		20191007063732 7C34CB2C
+D unchconv.ads		20000718095949 72DC4539
+X 1 ada.ads
+18U9*Ada 33|3r6 25r48 34|3r6 3r25 9r6
+X 7 a-interr.ads
+21U13*Interrupts 33|3r10 25r52 34|9r10
+X 8 a-intnam.ads
+26U24*Names 33|3r21 25r63 34|9r21
+53i4*External_Interrupt_2 33|25r69
+X 10 a-reatim.ads
+43U13*Real_Time 34|3r10 3r29
+45O9*Time 34|15r29 37r37
+57U13*Clock 34|17r31 44r35
+59U13*"+" 34|17r37 26r54 40r40 44r41
+89U13*Milliseconds 34|17r39 26r56 40r42 44r43
+X 19 devices.ads
+7U9*devices 33|2r6 2r19 34|7r6 7r19
+78I10*Speed_Samples_Type 34|36r24
+134U15*Beep 34|54r17 57r17 59r17 65r17 67r17
+138N27*On 34|62r24 64r24
+138N31*Off 34|69r25
+139U15*Light 34|62r17 64r17 69r18
+147U15*Activate_Brake 34|68r17
+X 20 driver.ads
+4U9*Driver 34|8r6 8r18
+18w15*Symptoms 34|21r13 46r13 47r13 48r13 49r13 50r13 100r13 101r13
+20U19 Read_Head_Symptom 34|47r22 101r22
+22U19 Read_Distancia_Insegura 34|48r22
+24U19 Read_Distancia_Imprudente 34|49r22
+26U19 Read_Peligro_Colision 34|50r22 100r22
+28U19 Read_Steering_Symptom 34|46r22
+33U19 Show_Symptoms 34|21r22
+44w15*Measures 34|22r13 23r13 51r13
+47U19 Show_Distance 34|22r22
+48U19 Read_Speed 34|51r22
+50U19 Show_Speed 34|23r22
+X 23 kernel.ads
+36U9*Kernel 34|2r6 2r32
+X 28 kernel-serial_output.ads
+36U16*Serial_Output 34|2r13 2r39
+X 31 priorities.ads
+2U9*Priorities 33|1r6 1r22
+4i5*Sporadic_Priority 33|23r26
+5i5*Risk_Priority 33|12r26
+9i5*Display_Priority 33|8r26
+X 32 pulse_interrupt.ads
+6U9*pulse_interrupt 34|10r6 10r27
+X 33 state.ads
+5U9*State 34|12b14
+7t10*Display
+11t10*Risks
+15w15*Operation_Mode 34|52r13 90r13 91r30 92r18 102r13
+16U19 Write_Mode 34|76b19 91r45 92r33
+16i31 Value 34|76b31 78r21
+17U19 Read_Mode 34|52r28 80b19 90r28 102r28
+17i30 Value 34|80b30 82r13
+19i9 Mode 34|78r13 82r22
+22w15*Interruption_Handler
+24U19 Validate_Entry 25r32 34|95b19
+26Y15 Change_Mode 34|87b15
+28e9 Enter 34|87r32 93r13 104r17 106r17 107r18
+X 34 state.adb
+15O9 Siguiente_Instante 17m9 25r25 26m13 26r35
+31e17 Head_Symptom 47m41 53r47 56r16 58r19 66r53
+32e9 Volantazo 46m45 53r16
+33e17 Distancia_Insegura 48m47 53r97 61r16
+34e17 Distancia_Imprudente 49m49 53r68 63r19
+35e17 Peligro_Colision 50m45 53r124 66r19
+36i17 Speed 51m34 56r46
+37O17 Siguiente_Instante 40m9 43r25 44m13
+38i9 Mode 52m39 53r30 56r33 58r36 61r39 63r44 66r40
+88i13 Mode 90m39 91r16 92r45
+96e13 Peligro_Colision 100m45 103r33 105r36
+97e13 Head_Symptom 101m41 105r61
+98i13 Mode 102m39 103r16 105r19
+X 35 system.ads
+46U9*System 34|4r6 4r18
+X 58 tools.ads
+6U9*tools 34|6r6 6r17
+8O5*Big_Bang 34|40r31
+13U15*Starting_Notice 34|20r13 45r13
+14U15*Finishing_Notice 34|24r13 71r13
+

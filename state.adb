@@ -15,7 +15,8 @@ package body State is
         Siguiente_Instante: Time;
     begin
         Siguiente_Instante := Clock + Milliseconds(1000);
-        for i in 1..8 loop
+        --for i in 1..8
+        loop
             Starting_Notice ("Display");
             Symptoms.Show_Symptoms;
             Measures.Show_Distance;
@@ -37,7 +38,8 @@ package body State is
         Mode: integer := 1;
     begin
         Siguiente_Instante := Big_Bang + Milliseconds(150);
-        for i in 1..53 loop
+        --for i in 1..53
+        loop
             delay until Siguiente_Instante;
             Siguiente_Instante := Clock + Milliseconds(150);
             Starting_Notice ("Risks");
