@@ -1,5 +1,6 @@
 with Priorities; use Priorities;
 with Devices; use Devices;
+with Ada.Interrupts.Names;
 
 package State is
 
@@ -12,8 +13,8 @@ package State is
     end Risks;
 
     protected Operation_Mode is
-        procedure Write_Mode (Value: in Boolean);
-        procedure Read_Mode (Value: out Boolean);
+        procedure Write_Mode (Value: in integer);
+        procedure Read_Mode (Value: out integer);
     private
         Mode: integer := 1;
     end Operation_Mode;
@@ -21,7 +22,7 @@ package State is
     protected Interruption_Handler is
         pragma Priority (Sporadic_Priority);
         procedure Validate_Entry;
-        pragma Attach_Handler (Validate_Entry, Ada.Interrupt.Names.External_Interrupt_2);
+        pragma Attach_Handler (Validate_Entry, Ada.Interrupts.Names.External_Interrupt_2);
         entry Change_Mode;
     private
         Enter: Boolean := False;

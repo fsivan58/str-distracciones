@@ -61,7 +61,7 @@ package body State is
             elsif Distancia_Imprudente and Mode = 1 then
                 Light (On);
                 Beep (4);
-            elsif Peligro_Colision adn Mode < 3 and Head_Symptom then
+            elsif Peligro_Colision and Mode < 3 and Head_Symptom then
                 Beep (5);
                 Activate_Brake;
             else Light (Off);
@@ -70,40 +70,40 @@ package body State is
         end loop;
     end Risks;
 
-    protected Operation_Mode is
-        procedure Write_Mode (Value: in Boolean) is
+    protected body Operation_Mode is
+        procedure Write_Mode (Value: in integer) is
         begin
             Mode := Value;
         end Write_Mode;
-        procedure Read_Mode (Value: out Boolean) is
+        procedure Read_Mode (Value: out integer) is
         begin
             Value := Mode;
         end Read_Mode;
     end Operation_Mode;
 
     protected body Interruption_Handler is
-        entry body Change_Mode when Enter is
-            Mode: integer := Boolean;
+        entry Change_Mode when Enter is
+            Mode: integer := 1;
         begin
             Operation_Mode.Read_Mode (Mode);
             if Mode = 3 then Operation_Mode.Write_Mode (1);
             else Operation_Mode.Write_Mode (Mode + 1); end if;
             Enter := False;
-        end Change_Mode;
-        procedure Validate_Entry (Value: in Boolean)
+        end Change_Mode; 
+        procedure Validate_Entry is
             Peligro_Colision: Boolean;
             Head_Symptom: Boolean;
-            Mode: integer := Boolean;
+            Mode: integer := 1;
         begin
             Symptoms.Read_Peligro_Colision (Peligro_Colision);
             Symptoms.Read_Head_Symptom (Head_Symptom);
-            Operation_Mode.Read_Mode (Mode);ç
+            Operation_Mode.Read_Mode (Mode);
             if Mode = 1 and not Peligro_Colision then
                 Enter := True;
-            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom) then
+            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom then
                 Enter := True;
             else Enter := True; end if;
-        end Enter;
+        end Validate_Entry;
     end Interruption_Handler;
 
 begin
