@@ -1,23 +1,88 @@
-V "GNAT Lib v3.13 "
+V "GNAT Lib v10"
 M P 0 W=b
-P
-R nnnnrnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+P DB ZX
 
-U main%b		main.adb		14850526 NE SU IL
+RN
+RR SIMPLE_BARRIERS
+RR NO_ABORT_STATEMENTS
+RR NO_ASYNCHRONOUS_CONTROL
+RR NO_CALENDAR
+RR NO_DYNAMIC_ATTACHMENT
+RR NO_DYNAMIC_PRIORITIES
+RR NO_ENTRY_QUEUE
+RR NO_IMPLICIT_HEAP_ALLOCATIONS
+RR NO_LOCAL_TIMING_EVENTS
+RR NO_LOCAL_PROTECTED_OBJECTS
+RR NO_PROTECTED_TYPE_ALLOCATORS
+RR NO_RELATIVE_DELAY
+RR NO_REQUEUE_STATEMENTS
+RR NO_SELECT_STATEMENTS
+RR NO_SPECIFIC_TERMINATION_HANDLERS
+RR NO_TASK_ALLOCATORS
+RR NO_TASK_ATTRIBUTES_PACKAGE
+RR NO_TASK_HIERARCHY
+RR NO_TASK_TERMINATION
+RR NO_TERMINATE_ALTERNATIVES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+RR MAX_PROTECTED_ENTRIES=1
+RR MAX_SELECT_ALTERNATIVES=0
+RR MAX_TASK_ENTRIES=0
+RR MAX_TASKS=4
+RR MAX_ASYNCHRONOUS_SELECT_NESTING=0
+R ada.execution_time.group_budgets
+R ada.execution_time.timers
+R system.multiprocessors.dispatching_domains
+
+U main%b		main.adb		eb098a84 NE OO SU IL
 W add%s			add.adb			add.ali
 W system%s		system.ads		system.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
 
-D add.ads		20201014171418 204085E0
-D kernel.ads		20010312182047 56BBE4F1
-D kernel-parameters.ads	20010312182047 0D1B8F78
-D main.adb		20191007063732 1E203A38
-D system.ads		20010312182047 2AE5BAFE
-X 1 add.ads
-1U9*add 4|1r6 10r4
-2U13*Background 4|10r8
-X 4 main.adb
-4U11*main
-X 5 system.ads
-46U9*System 4|2r6 6r21
-110I12*Priority 4|6r28
+D ada.ads		20200723063517 76789da1 ada%s
+D a-except.ads		20200723063517 a7106115 ada.exceptions%s
+D a-unccon.ads		20200723063517 0e9b276f ada.unchecked_conversion%s
+D add.ads		20201104151233 9cb6a7e5 add%s
+D interfac.ads		20200723063517 5ab55268 interfaces%s
+D i-c.ads		20200723063517 5421119b interfaces.c%s
+D main.adb		20201104151233 318ac165 main%b
+D system.ads		20200723063517 4635ec04 system%s
+D s-atacco.ads		20200723063517 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20200723063517 54135002 system.exception_table%s
+D s-linux.ads		20200723063517 ed0b8aee system.linux%s
+D s-multip.ads		20200723063517 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20200930104307 2da46a9c system.os_constants%s
+D s-osinte.ads		20200723063517 baabc537 system.os_interface%s
+D s-parame.ads		20200723063517 48ec542b system.parameters%s
+D s-secsta.ads		20200723063517 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200723063517 a7318a92 system.soft_links%s
+D s-stache.ads		20200723063517 a37c21ec system.stack_checking%s
+D s-stausa.ads		20200723063517 017a0a05 system.stack_usage%s
+D s-stalib.ads		20200723063517 09bd3940 system.standard_library%s
+D s-stoele.ads		20200723063517 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20200723063517 2b3f8252 system.task_info%s
+D s-taspri.ads		20200723063517 f40ac08d system.task_primitives%s
+D s-taskin.ads		20200723063517 b9d612e2 system.tasking%s
+D s-tasres.ads		20200723063517 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20200723063517 c88b6d9a system.tasking.restricted.stages%s
+D s-traent.ads		20200723063517 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200723063517 34867c83 system.unsigned_types%s
+D gnat.adc		20201104151233 00000000
+G a e
+G c Z b b [main standard 4 11 none]
+G r c none [main standard 4 11 none] [background add 2 13 none]
+X 4 add.ads
+1K9*add 3e8 7|1w6 10r4
+2U13*Background 7|10s8
+X 7 main.adb
+4U11*main 4b11 12l5 12t9
+X 8 system.ads
+37K9*System 7|2w6 6r21 8|156e11
+108I12*Any_Priority{integer}
+109I12*Priority{108I12} 7|6r28
+X 19 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+X 26 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
 

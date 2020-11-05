@@ -78,10 +78,11 @@ package body Driver is
             Symptoms.Write_Steering;
             Symptoms.Read_HeadPosition (Current_H);
             Symptoms.Read_Steering (Current_S);
-            -- TODO corregir giro hacia el mismo sentido
+
             if ((abs Previous_H(x) > 30 and abs Current_H(x) > 30) or
-            (abs Previous_H(y) > 30 and abs Current_H(y) > 30 and abs Current_S > 30))
-            then 
+            (Previous_H(y) > 30 and Current_H(y) > 30 and Current_S > 30) or
+            (Previous_H(y) < 30 and Current_H(y) < 30 and Current_S < 30))
+            then
                 Symptoms.Write_Head_Symptom (True);
                 Beep(4);
             else Symptoms.Write_Head_Symptom (False);
