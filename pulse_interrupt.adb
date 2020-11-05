@@ -15,7 +15,6 @@ package body pulse_interrupt is
 
    task body Interrupt is
      Next_Time : Ada.Real_Time.Time := Big_Bang;
-
      Tamanio_Tabla_Retardos : constant Integer := 10;
      type Indice_Retardos is mod Tamanio_Tabla_Retardos;
      type Tabla_Retardos is array (Indice_Retardos) of Ada.Real_Time.Time_Span;
@@ -30,7 +29,7 @@ package body pulse_interrupt is
          j := j + 1;
 
          --Hora_Actual (Big_Bang);
-         Put ("======> Interrupci�n Externa 2 ");
+         Put ("======> Interrupcion Externa 2 ");
       end loop;
    end Interrupt;
 

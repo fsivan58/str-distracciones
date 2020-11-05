@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnvvnnnnvvvvnvvvnnnnnnnnnnvnnnnnnnvnnnn
 
-U pulse_interrupt%b	pulse_interrupt.adb	5525CACC PK IL
+U pulse_interrupt%b	pulse_interrupt.adb	2BEF954E PK IL
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time.delays%s  a-retide.adb		a-retide.ali
 W force_external_interrupt_2%b  force_external_interrupt_2.adb  force_external_interrupt_2.ali
@@ -41,8 +41,8 @@ D kernel-peripherals-registers.ads  20010312182047 3D2FDF01
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D pulse_interrupt.ads	20191007063732 39938A04
-D pulse_interrupt.adb	20201104171524 0A3BBB1D
+D pulse_interrupt.ads	20201104193606 39938A04
+D pulse_interrupt.adb	20201104202621 74F1E49F
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-finimp.ads		20000718095949 1C201C0F
@@ -65,46 +65,46 @@ D s-unstyp.ads		20000718095949 78AFB91D
 D tools.ads		20191007063732 7C34CB2C
 D unchconv.ads		20000718095949 72DC4539
 X 1 ada.ads
-18U9*Ada 20|3r6 3r25 21|17r18 21r56
+18U9*Ada 20|2r6 2r25 21|17r18 20r56
 X 5 a-reatim.ads
-43U13*Real_Time 20|3r10 3r29 21|17r22 21r60
+43U13*Real_Time 20|2r10 2r29 21|17r22 20r60
 45O9*Time 21|17r32
-50O9*Time_Span 20|12r23 13r23 14r23 15r23 16r23 17r23 18r23 19r23 20r23 21r24
-. 21|21r70
-59U13*"+" 21|27r33
-85U13*To_Time_Span 20|12r36 13r36 14r36 15r36 16r36 17r36 18r36 19r36 20r36
-. 21r37
+50O9*Time_Span 20|11r23 12r23 13r23 14r23 15r23 16r23 17r23 18r23 19r23 20r24
+. 21|20r70
+59U13*"+" 21|26r33
+85U13*To_Time_Span 20|11r36 12r36 13r36 14r36 15r36 16r36 17r36 18r36 19r36
+. 20r37
 X 10 force_external_interrupt_2.adb
-7U11*Force_External_Interrupt_2 21|5r6 29r10
+7U11*Force_External_Interrupt_2 21|5r6 28r10
 X 11 kernel.ads
 36U9*Kernel 21|2r6 2r32
 X 17 kernel-serial_output.ads
 36U16*Serial_Output 21|2r13 2r39
-41U14*Put 21|33r10
+41U14*Put 21|32r10
 X 20 pulse_interrupt.ads
-6U9*pulse_interrupt 21|10b14
-12O4*Interr_1 21|22r46
-13O4*Interr_2 21|22r55
-14O4*Interr_3 21|22r64
-15O4*Interr_4 21|22r73
-16O4*Interr_5 21|22r82
-17O4*Interr_6 21|23r46
-18O4*Interr_7 21|23r55
-19O4*Interr_8 21|23r64
-20O4*Interr_9 21|23r73
-21O4*Interr_10 21|23r82
-28i4*Priority_Of_External_Interrupts_2 32r24
-31t9*Interrupt
+5U9*pulse_interrupt 21|10b14
+11O4*Interr_1 21|21r46
+12O4*Interr_2 21|21r55
+13O4*Interr_3 21|21r64
+14O4*Interr_4 21|21r73
+15O4*Interr_5 21|21r82
+16O4*Interr_6 21|22r46
+17O4*Interr_7 21|22r55
+18O4*Interr_8 21|22r64
+19O4*Interr_9 21|22r73
+20O4*Interr_10 21|22r82
+27i4*Priority_Of_External_Interrupts_2 31r24
+30t9*Interrupt
 X 21 pulse_interrupt.adb
-17O6 Next_Time 27m10 27r23 28r22
-19i6 Tamanio_Tabla_Retardos 20r34
-20M11 Indice_Retardos 21r36 24r10 24r29
-21A11 Tabla_Retardos 22r27
-22a6 periodoInterrupcion 27r35
-24m6 j 27r55 30m10 30r15
+17O6 Next_Time 26m10 26r23 27r22
+18i6 Tamanio_Tabla_Retardos 19r34
+19M11 Indice_Retardos 20r36 23r10 23r29
+20A11 Tabla_Retardos 21r27
+21a6 periodoInterrupcion 26r35
+23m6 j 26r55 29m10 29r15
 X 22 system.ads
-46U9*System 20|4r6 4r18 28r49 29r43 21|4r6 4r18
-117I12*Interrupt_Priority 20|28r56 29r50
+46U9*System 20|3r6 3r18 27r49 28r43 21|4r6 4r18
+117I12*Interrupt_Priority 20|27r56 28r50
 X 41 tools.ads
 6U9*tools 21|8r6 8r17
 8O5*Big_Bang 21|17r40

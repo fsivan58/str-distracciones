@@ -22,7 +22,7 @@ W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W tools%s		tools.adb		tools.ali  ED
 
-U driver%s		driver.ads		62CB5AE8 PK
+U driver%s		driver.ads		6C4B72E9 PK
 W devices%s		devices.adb		devices.ali  ED
 W priorities%s		priorities.ads		priorities.ali
 W system%s		system.ads		system.ali
@@ -61,7 +61,7 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201104171524 38200C2F
+D priorities.ads	20201105151501 36A0242E
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47

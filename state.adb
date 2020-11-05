@@ -99,6 +99,7 @@ package body State is
             Head_Symptom: Boolean;
             Mode: integer := 1;
         begin
+        Put ("Entrada en Validate_Entry");
             Symptoms.Read_Peligro_Colision (Peligro_Colision);
             Symptoms.Read_Head_Symptom (Head_Symptom);
             Operation_Mode.Read_Mode (Mode);
