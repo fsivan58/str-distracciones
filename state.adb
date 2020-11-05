@@ -84,32 +84,38 @@ package body State is
     end Operation_Mode;
 
     protected body Interruption_Handler is
-        entry Change_Mode when Enter is
-            Mode: integer := 1;
-        begin
-            Operation_Mode.Read_Mode (Mode);
-            if Mode = 3 then Operation_Mode.Write_Mode (1);
-            else Operation_Mode.Write_Mode (Mode + 1); end if;
-            Put ("::::::: MODE :::::::");
-            Put (Integer'Image(Mode));
-            Enter := False;
-        end Change_Mode; 
         procedure Validate_Entry is
-            Peligro_Colision: Boolean;
-            Head_Symptom: Boolean;
-            Mode: integer := 1;
         begin
-        Put ("Entrada en Validate_Entry");
+            Enter := True;
+        end Validate_Entry;
+        entry Change_Mode when Enter is
+        begin
+            Enter := False;
+        end Change_Mode;
+    end Interruption_Handler;
+
+    task body Sporadic_Task is
+        Peligro_Colision: Boolean;
+        Head_Symptom: Boolean;
+        Mode: integer := 1;
+    begin
+        loop
+            Interruption_Handler.Change_Mode;
+
+            Operation_Mode.Read_Mode (Mode);
             Symptoms.Read_Peligro_Colision (Peligro_Colision);
             Symptoms.Read_Head_Symptom (Head_Symptom);
-            Operation_Mode.Read_Mode (Mode);
+
             if Mode = 1 and not Peligro_Colision then
-                Enter := True;
+                Operation_Mode.Write_Mode (2);
             elsif Mode = 2 and not Peligro_Colision and not Head_Symptom then
-                Enter := True;
-            else Enter := True; end if;
-        end Validate_Entry;
-    end Interruption_Handler;
+                Operation_Mode.Write_Mode (3);
+            else Operation_Mode.Write_Mode (1); end if;
+
+            Put (": MODE :");
+            Put (Integer'Image(Mode));
+        end loop;
+    end Sporadic_Task;
 
 begin
     null;

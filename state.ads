@@ -1,6 +1,7 @@
 with Priorities; use Priorities;
 with Devices; use Devices;
 with Ada.Interrupts.Names;
+with System; use System;
 
 package State is
 
@@ -20,12 +21,18 @@ package State is
     end Operation_Mode;
 
     protected Interruption_Handler is
-        pragma Priority (Sporadic_Priority);
+        pragma Priority (System.Interrupt_Priority'First + 10);
         procedure Validate_Entry;
         pragma Attach_Handler (Validate_Entry, Ada.Interrupts.Names.External_Interrupt_2);
         entry Change_Mode;
     private
         Enter: Boolean := False;
     end Interruption_Handler;
+
+    task Sporadic_Task is
+        pragma Priority (Sporadic_Priority);
+    end Sporadic_Task;
+
+    
 
 end State;

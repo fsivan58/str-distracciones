@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnnvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U add%b			add.adb			709E86B2 PK IL
+U add%b			add.adb			7B6FB2DE PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W devices%s		devices.adb		devices.ali
@@ -47,8 +47,8 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201105151501 36A0242E
-D state.ads		20201104201148 2B1BB203
+D priorities.ads	20201105160252 37800BAE
+D state.ads		20201105162323 20EA866F
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47
@@ -90,7 +90,7 @@ X 24 kernel.ads
 X 29 kernel-serial_output.ads
 36U16*Serial_Output 19|2r13 2r39
 X 33 state.ads
-5U9*State 19|9r6 9r17
+6U9*State 19|9r6 9r17
 X 34 system.ads
 46U9*System 19|4r6 4r18
 X 57 tools.ads
