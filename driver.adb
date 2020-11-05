@@ -16,25 +16,20 @@ package body Driver is
         Siguiente_Instante: Time;
     begin
         Siguiente_Instante := Clock + Milliseconds(300);
-        --for i in 1..27
         loop
             Starting_Notice ("Distance");
             Measures.Write_Distance;
-            Measures.Read_Distance (Current_D);
             Measures.Write_Speed;
+            Measures.Read_Distance (Current_D);
             Measures.Read_Speed (Current_V);
             Recommended_Distance := float ((Current_V/10)**2);
             if (float(Current_D) < Recommended_Distance) then
                 Symptoms.Write_Distancia_Insegura (True);
-                Light (On);
             elsif (float(Current_D) < float(Recommended_Distance)/float(2)) then
                 Symptoms.Write_Distancia_Imprudente (True);
-                Light (On);
             elsif (float(Current_D) < float(Recommended_Distance)/float(3)) then 
                 Symptoms.Write_Peligro_Colision (True);
-                Light (On);
             else
-                Light (Off);
                 Symptoms.Write_Distancia_Insegura (False);
                 Symptoms.Write_Distancia_Imprudente (False);
                 Symptoms.Write_Peligro_Colision (False);
@@ -52,10 +47,11 @@ package body Driver is
         Siguiente_Instante: Time;
     begin
         Siguiente_Instante := Big_Bang + Milliseconds(350);
-        --for i in 1..23
         loop
             Starting_Notice ("Steering");
             Previous_S := Current_S;
+            Symptoms.Write_Steering;
+            Measures.Write_Speed;
             Symptoms.Read_Steering (Current_S);
             Measures.Read_Speed (Speed);
             if Previous_S - Current_S > abs(20) and Speed > 40 then
@@ -75,12 +71,14 @@ package body Driver is
         Siguiente_Instante: Time;
     begin
         Siguiente_Instante := Big_Bang + Milliseconds(400);
-        --for i in 1..20
         loop
             Starting_Notice ("Head");
             Previous_H := Current_H;
+            Symptoms.Write_HeadPosition;
+            Symptoms.Write_Steering;
             Symptoms.Read_HeadPosition (Current_H);
-            Reading_Steering (Current_S);
+            Symptoms.Read_Steering (Current_S);
+            -- TODO corregir giro hacia el mismo sentido
             if ((abs Previous_H(x) > 30 and abs Current_H(x) > 30) or
             (abs Previous_H(y) > 30 and abs Current_H(y) > 30 and abs Current_S > 30))
             then 
@@ -164,6 +162,15 @@ package body Driver is
         begin
             Value := Steering;
         end Read_Steering;
+
+        procedure Display_Symptom (Symptom: in Unbounded_String) is
+        begin
+            Current_Time (Big_Bang);
+            Put ("............# ");
+            Put ("Symptom: ");
+            Put (Symptom);
+            Execution_Time (WCET_Display);
+        end Display_Symptom;
 
         procedure Show_Symptoms is
         begin

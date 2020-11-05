@@ -13,6 +13,10 @@ package State is
         pragma Priority (Risk_Priority);
     end Risks;
 
+    task Sporadic_Task is
+        pragma Priority (Sporadic_Priority);
+    end Sporadic_Task;
+
     protected Operation_Mode is
         procedure Write_Mode (Value: in integer);
         procedure Read_Mode (Value: out integer);
@@ -27,12 +31,6 @@ package State is
         entry Change_Mode;
     private
         Enter: Boolean := False;
-    end Interruption_Handler;
-
-    task Sporadic_Task is
-        pragma Priority (Sporadic_Priority);
-    end Sporadic_Task;
-
-    
+    end Interruption_Handler;    
 
 end State;

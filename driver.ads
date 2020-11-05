@@ -1,5 +1,7 @@
 with Priorities; use Priorities;
 with Devices; use Devices;
+with ada.strings.unbounded; use ada.strings.unbounded;
+with ada.strings.unbounded.text_io; use ada.strings.unbounded.text_io;
 
 package Driver is
 
@@ -30,6 +32,7 @@ package Driver is
         procedure Read_HeadPosition (Value: out HeadPosition_Samples_Type);
         procedure Write_Steering;
         procedure Read_Steering (Value: out Steering_Samples_Type);
+        procedure Display_Symptom (Symptom: in Unbounded_String);
         procedure Show_Symptoms;
     private
         Head_Symptom: Boolean := False;

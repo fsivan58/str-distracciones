@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnvvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U state%b		state.adb		6259B62B PK
+U state%b		state.adb		1B760F8E PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.interrupts%s	a-interr.adb		a-interr.ali
@@ -21,7 +21,7 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W tools%s		tools.adb		tools.ali  ED
 
-U state%s		state.ads		7EA988CF PK
+U state%s		state.ads		05238DFC PK
 W ada%s			ada.ads			ada.ali
 W ada.interrupts%s	a-interr.adb		a-interr.ali
 W ada.interrupts.names%s  a-intnam.ads		a-intnam.ali
@@ -54,8 +54,8 @@ D a-strunb.ads		20000718095948 23CE47B9
 D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
-D devices.ads		20201102114124 09EB4686
-D driver.ads		20201102110100 53001041
+D devices.ads		20201105163501 48AB7E58
+D driver.ads		20201105163608 3653FED0
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -66,10 +66,10 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201105160252 37800BAE
+D priorities.ads	20201105163937 59853DC0
 D pulse_interrupt.ads	20201104193606 39938A04
-D state.ads		20201105162323 20EA866F
-D state.adb		20201105162448 76C0EFD4
+D state.ads		20201105172111 74258DEC
+D state.adb		20201105172743 7F338BBD
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47
@@ -97,48 +97,48 @@ D s-unstyp.ads		20000718095949 78AFB91D
 D tools.ads		20191007063732 7C34CB2C
 D unchconv.ads		20000718095949 72DC4539
 X 1 ada.ads
-18U9*Ada 33|3r6 26r48 34|3r6 3r25 9r6
+18U9*Ada 33|3r6 30r48 34|3r6 3r25 9r6
 X 7 a-interr.ads
-21U13*Interrupts 33|3r10 26r52 34|9r10
+21U13*Interrupts 33|3r10 30r52 34|9r10
 X 8 a-intnam.ads
-26U24*Names 33|3r21 26r63 34|9r21
-53i4*External_Interrupt_2 33|26r69
+26U24*Names 33|3r21 30r63 34|9r21
+53i4*External_Interrupt_2 33|30r69
 X 10 a-reatim.ads
 43U13*Real_Time 34|3r10 3r29
-45O9*Time 34|15r29 37r37
-57U13*Clock 34|17r31 44r35
-59U13*"+" 34|17r37 26r54 40r40 44r41
-89U13*Milliseconds 34|17r39 26r56 40r42 44r43
+45O9*Time 34|15r29 36r37
+57U13*Clock 34|17r31 42r35
+59U13*"+" 34|17r37 25r54 39r40 42r41
+89U13*Milliseconds 34|17r39 25r56 39r42 42r43
 X 19 devices.ads
 7U9*devices 33|2r6 2r19 34|7r6 7r19
-78I10*Speed_Samples_Type 34|36r24
-134U15*Beep 34|54r17 57r17 59r17 65r17 67r17
-138N27*On 34|62r24 64r24
-138N31*Off 34|69r25
-139U15*Light 34|62r17 64r17 69r18
-147U15*Activate_Brake 34|68r17
+78I10*Speed_Samples_Type 34|35r24
+130U15*Beep 34|54r17 57r17 59r17 62r17 66r17
+134N27*On 34|65r24 68r24
+134N31*Off 34|70r24 92r24
+135U15*Light 34|65r17 68r17 70r17 92r17
+143U15*Activate_Brake 34|63r17
 X 20 driver.ads
-4U9*Driver 34|8r6 8r18
-18w15*Symptoms 34|21r13 46r13 47r13 48r13 49r13 50r13 106r13 107r13
-20U19 Read_Head_Symptom 34|47r22 107r22
-22U19 Read_Distancia_Insegura 34|48r22
-24U19 Read_Distancia_Imprudente 34|49r22
-26U19 Read_Peligro_Colision 34|50r22 106r22
-28U19 Read_Steering_Symptom 34|46r22
-33U19 Show_Symptoms 34|21r22
-44w15*Measures 34|22r13 23r13 51r13
-47U19 Show_Distance 34|22r22
-48U19 Read_Speed 34|51r22
-50U19 Show_Speed 34|23r22
+6U9*Driver 34|8r6 8r18
+20w15*Symptoms 34|20r13 45r13 46r13 47r13 48r13 49r13 86r13 87r13
+22U19 Read_Head_Symptom 34|46r22 87r22
+24U19 Read_Distancia_Insegura 34|47r22
+26U19 Read_Distancia_Imprudente 34|48r22
+28U19 Read_Peligro_Colision 34|49r22 86r22
+30U19 Read_Steering_Symptom 34|45r22
+36U19 Show_Symptoms 34|20r22
+47w15*Measures 34|21r13 22r13 50r13
+50U19 Show_Distance 34|21r22
+51U19 Read_Speed 34|50r22
+53U19 Show_Speed 34|22r22
 X 23 kernel.ads
 36U9*Kernel 34|2r6 2r32
 X 28 kernel-serial_output.ads
 36U16*Serial_Output 34|2r13 2r39
-41U14*Put 34|115r13 116r13
+41U14*Put 34|98r13 99r13
 X 31 priorities.ads
 2U9*Priorities 33|1r6 1r22
-4i5*Sporadic_Priority 33|33r26
-5i5*Risk_Priority 33|13r26
+4i5*Sporadic_Priority 33|17r26
+6i5*Risk_Priority 33|13r26
 9i5*Display_Priority 33|9r26
 X 32 pulse_interrupt.ads
 5U9*pulse_interrupt 34|10r6 10r27
@@ -146,36 +146,36 @@ X 33 state.ads
 6U9*State 34|12b14
 8t10*Display
 12t10*Risks
-16w15*Operation_Mode 34|52r13 105r13 110r17 112r17 113r18
-17U19 Write_Mode 34|76b19 110r32 112r32 113r33
-17i31 Value 34|76b31 78r21
-18U19 Read_Mode 34|52r28 80b19 105r28
-18i30 Value 34|80b30 82r13
-20i9 Mode 34|78r13 82r22
-23w15*Interruption_Handler 34|103r13
-25U19 Validate_Entry 34|87b19 33|26r32
-27Y15 Change_Mode 34|91b15 103r34
-29e9 Enter 34|89r13 91r32 93r13
-32t10*Sporadic_Task
+16t10*Sporadic_Task
+20w15*Operation_Mode 34|51r13 85r13 90r17 93r17 95r17
+21U19 Write_Mode 34|90r32 93r32 95r32 104b19
+21i31 Value 34|104b31 106r21
+22U19 Read_Mode 34|51r28 85r28 108b19
+22i30 Value 34|108b30 110r13
+24i9 Mode 34|106r13 110r22
+27w15*Interruption_Handler 34|83r13
+29U19 Validate_Entry 34|115b19 33|30r32
+31Y15 Change_Mode 34|83r34 119b15
+33e9 Enter 34|117r13 119r32 121r13
 X 34 state.adb
-15O9 Siguiente_Instante 17m9 25r25 26m13 26r35
-31e17 Head_Symptom 47m41 53r47 56r16 58r19 66r53
-32e9 Volantazo 46m45 53r16
-33e17 Distancia_Insegura 48m47 53r97 61r16
-34e17 Distancia_Imprudente 49m49 53r68 63r19
-35e17 Peligro_Colision 50m45 53r124 66r19
-36i17 Speed 51m34 56r46
-37O17 Siguiente_Instante 40m9 43r25 44m13
-38i9 Mode 52m39 53r30 56r33 58r36 61r39 63r44 66r40
-98e9 Peligro_Colision 106m45 109r33 111r36
-99e9 Head_Symptom 107m41 111r61
-100i9 Mode 105m39 109r16 111r19 116r32
+15O9 Siguiente_Instante 17m9 24r25 25m13 25r35
+30e17 Head_Symptom 46m41 53r47 56r16 58r19 61r50
+31e9 Volantazo 45m45 53r16
+32e17 Distancia_Insegura 47m47 53r97 67r19
+33e17 Distancia_Imprudente 48m49 53r68 64r19
+34e17 Peligro_Colision 49m45 53r124 61r16
+35i17 Speed 50m34 56r46
+36O17 Siguiente_Instante 39m9 41r25 42m13
+37i9 Mode 51m39 53r30 56r33 58r36 61r37 64r44 67r42 69r19
+78e9 Peligro_Colision 86m45 89r33 91r36
+79e9 Head_Symptom 87m41 91r61
+80i9 Mode 85m39 89r16 91r19 94r19 99r32
 X 35 system.ads
-46U9*System 33|4r6 4r18 24r26 34|4r6 4r18
-117I12*Interrupt_Priority 33|24r33
+46U9*System 33|4r6 4r18 28r26 34|4r6 4r18
+117I12*Interrupt_Priority 33|28r33
 X 59 tools.ads
 6U9*tools 34|6r6 6r17
-8O5*Big_Bang 34|40r31
-13U15*Starting_Notice 34|20r13 45r13
-14U15*Finishing_Notice 34|24r13 71r13
+8O5*Big_Bang 34|39r31
+13U15*Starting_Notice 34|19r13 44r13
+14U15*Finishing_Notice 34|23r13 73r13
 

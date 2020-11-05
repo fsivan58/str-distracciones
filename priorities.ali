@@ -3,15 +3,15 @@ A -g
 P
 R nnnnrnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U priorities%s		priorities.ads		37800BAE NE PK
+U priorities%s		priorities.ads		59853DC0 NE PK
 
-D priorities.ads	20201105160252 37800BAE
+D priorities.ads	20201105163937 59853DC0
 X 1 priorities.ads
 2U9*Priorities
 4i5*Sporadic_Priority
-5i5*Risk_Priority
-6i5*Distance_Priority
-7i5*Steering_Priority
-8i5*Head_Priority
+5i5*Head_Priority
+6i5*Risk_Priority
+7i5*Distance_Priority
+8i5*Steering_Priority
 9i5*Display_Priority
 

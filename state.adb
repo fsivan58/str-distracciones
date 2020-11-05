@@ -15,7 +15,6 @@ package body State is
         Siguiente_Instante: Time;
     begin
         Siguiente_Instante := Clock + Milliseconds(1000);
-        --for i in 1..8
         loop
             Starting_Notice ("Display");
             Symptoms.Show_Symptoms;
@@ -38,10 +37,10 @@ package body State is
         Mode: integer := 1;
     begin
         Siguiente_Instante := Big_Bang + Milliseconds(150);
-        --for i in 1..53
         loop
             delay until Siguiente_Instante;
             Siguiente_Instante := Clock + Milliseconds(150);
+
             Starting_Notice ("Risks");
             Symptoms.Read_Steering_Symptom (Volantazo);
             Symptoms.Read_Head_Symptom (Head_Symptom);
@@ -50,6 +49,7 @@ package body State is
             Symptoms.Read_Peligro_Colision (Peligro_Colision);
             Measures.Read_Speed (Speed);
             Operation_Mode.Read_Mode (Mode);
+
             if Volantazo and Mode < 3 and not Head_Symptom and not Distancia_Imprudente and not Distancia_Insegura and not Peligro_Colision then
                 Beep (1);
             end if;
@@ -58,19 +58,47 @@ package body State is
             elsif Head_Symptom and Mode < 3 then
                 Beep (2);
             end if;
-            if Distancia_Insegura and Mode = 1 then
-                Light (On);
+            if Peligro_Colision and Mode < 3 and Head_Symptom then
+                Beep (5);
+                Activate_Brake;
             elsif Distancia_Imprudente and Mode = 1 then
                 Light (On);
                 Beep (4);
-            elsif Peligro_Colision and Mode < 3 and Head_Symptom then
-                Beep (5);
-                Activate_Brake;
-            else Light (Off);
+            elsif Distancia_Insegura and Mode = 1 then
+                Light (On);
+            elsif Mode /= 3 then
+                Light (Off);
             end if;
+            
             Finishing_Notice ("Risks");
         end loop;
     end Risks;
+
+    task body Sporadic_Task is
+        Peligro_Colision: Boolean;
+        Head_Symptom: Boolean;
+        Mode: integer := 1;
+    begin
+        loop
+            Interruption_Handler.Change_Mode;
+
+            Operation_Mode.Read_Mode (Mode);
+            Symptoms.Read_Peligro_Colision (Peligro_Colision);
+            Symptoms.Read_Head_Symptom (Head_Symptom);
+
+            if Mode = 1 and not Peligro_Colision then
+                Operation_Mode.Write_Mode (2);
+            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom then
+                Light (Off);
+                Operation_Mode.Write_Mode (3);
+            elsif Mode = 3 then
+                Operation_Mode.Write_Mode (1);
+            end if;
+
+            Put (": MODE :");
+            Put (Integer'Image(Mode));
+        end loop;
+    end Sporadic_Task;
 
     protected body Operation_Mode is
         procedure Write_Mode (Value: in integer) is
@@ -93,29 +121,6 @@ package body State is
             Enter := False;
         end Change_Mode;
     end Interruption_Handler;
-
-    task body Sporadic_Task is
-        Peligro_Colision: Boolean;
-        Head_Symptom: Boolean;
-        Mode: integer := 1;
-    begin
-        loop
-            Interruption_Handler.Change_Mode;
-
-            Operation_Mode.Read_Mode (Mode);
-            Symptoms.Read_Peligro_Colision (Peligro_Colision);
-            Symptoms.Read_Head_Symptom (Head_Symptom);
-
-            if Mode = 1 and not Peligro_Colision then
-                Operation_Mode.Write_Mode (2);
-            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom then
-                Operation_Mode.Write_Mode (3);
-            else Operation_Mode.Write_Mode (1); end if;
-
-            Put (": MODE :");
-            Put (Integer'Image(Mode));
-        end loop;
-    end Sporadic_Task;
 
 begin
     null;

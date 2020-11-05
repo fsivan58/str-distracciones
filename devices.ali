@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnnvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U devices%b		devices.adb		0A7BB9D5 PK IL
+U devices%b		devices.adb		40D5F15A PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -20,7 +20,7 @@ W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W tools%s		tools.adb		tools.ali
 
-U devices%s		devices.ads		359A634B PK IL
+U devices%s		devices.ads		74DA5B95 PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -42,8 +42,8 @@ D a-strunb.ads		20000718095948 23CE47B9
 D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
-D devices.ads		20201102114124 09EB4686
-D devices.adb		20201102114104 222720BB
+D devices.ads		20201105163501 48AB7E58
+D devices.adb		20201105163350 29C950EA
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -80,30 +80,28 @@ D unchconv.ads		20000718095949 72DC4539
 X 1 ada.ads
 18U9*Ada 16|3r6 3r25 4r6 4r33 5r6 5r41 12r29 12r56 13r26 13r53 14r33 14r60
 . 15r29 15r56 17r31 17r58 18r24 18r51 20r28 20r55 21r26 21r53 22r26 22r53
-. 23r38 23r65 24r26 24r53 129r43 129r69 17|4r6 4r33 5r6 5r41 385r40 385r66
+. 23r38 23r65 24r26 24r53 125r43 125r69 17|4r6 4r33 5r6 5r41 376r40 376r66
 X 8 a-reatim.ads
 43U13*Real_Time 16|3r10 3r29 12r33 12r60 13r30 13r57 14r37 14r64 15r33 15r60
 . 17r35 17r62 18r28 18r55 20r32 20r59 21r30 21r57 22r30 22r57 23r42 23r69
-. 24r30 24r57 129r47 129r73 17|385r44 385r70
-45O9*Time 16|129r57 129r83 17|385r54 385r80
+. 24r30 24r57 125r47 125r73 17|376r44 376r70
+45O9*Time 16|125r57 125r83 17|376r54 376r80
 50O9*Time_Span 16|12r43 13r40 14r47 15r43 17r45 18r38 20r42 21r40 22r40 23r52
 . 24r40
 57U13*Clock 17|39r38 70r38 82r38 119r38 131r38 169r38 181r38 218r38 230r38
 . 267r38 279r38
 62U13*"-" 17|39r44 70r44 82r44 119r44 131r44 169r44 181r44 218r44 230r44
-. 267r44 279r44 391r43
+. 267r44 279r44 382r43
 84U13*To_Duration 17|39r26 70r26 82r26 119r26 131r26 169r26 181r26 218r26
-. 230r26 267r26 279r26 391r26
+. 230r26 267r26 279r26 382r26
 89U13*Milliseconds 16|12r70 13r67 14r74 15r70 17r72 18r65 20r69 21r67 22r67
 . 23r79 24r67
 X 10 a-string.ads
 18U13*Strings 16|4r10 4r37 5r10 5r45 17|4r10 4r37 5r10 5r45
 X 12 a-strunb.ads
 43U21*Unbounded 16|4r18 4r45 5r18 5r53 17|4r18 4r45 5r18 5r53
-46R9*Unbounded_String 16|125r44 17|376r40
 X 13 a-suteio.ads
 43U31*Text_IO 16|5r28 5r63 17|5r28 5r63
-51U14*Put 17|381r4
 X 16 devices.ads
 7U9*devices 17|9b14
 12O5*WCET_Distance 17|312r20
@@ -112,46 +110,46 @@ X 16 devices.ads
 15O5*WCET_Steering 17|271r26 330r20
 17O5*WCET_Eyes_Image 17|74r26 123r26
 18O5*WCET_EEG 17|43r26
-20O5*WCET_Display 17|303r20 342r20 353r20 373r20 382r20
-21O5*WCET_Alarm 17|418r19
-22O5*WCET_Light 17|402r20
-23O5*WCET_Automatic_Driving 17|427r20
-24O5*WCET_Brake 17|435r20
+20O5*WCET_Display 17|303r20 342r20 353r20 373r20
+21O5*WCET_Alarm 17|409r19
+22O5*WCET_Light 17|393r20
+23O5*WCET_Automatic_Driving 17|418r20
+24O5*WCET_Brake 17|426r20
 34I10*Value_Electrode 38r59
 35i5*Number_Electrodes 37r52
 37I10*EEG_Samples_Index 38r37 17|350r13
-38A10*EEG_Samples_Type 17|21r42 16|41r39 17|35r41 16|101r45 350r74 17|29r39
-. 345r41
+38A10*EEG_Samples_Type 346r74 17|21r42 35r41 16|101r45 17|29r39 16|41r39
+. 17|345r41
 41U15*Reading_Sensors 17|29b15
 41a32 L 17|29b32 31m46
 47E10*Eyes_Samples_Index 17|362r13 16|49r38
 47N33*left 17|366r29
 47N38*right 17|366r18
-48I10*Eyes_Samples_Values 17|86r32 86r56 90r32 90r56 16|49r61 17|357r11
-49A10*Eyes_Samples_Type 51r41 17|53r44 16|105r39 312r76 17|60r41 66r43 356r35
+48I10*Eyes_Samples_Values 17|86r32 86r56 16|49r61 17|90r32 90r56 357r11
+49A10*Eyes_Samples_Type 51r41 17|53r44 16|105r39 308r76 17|60r41 66r43 356r35
 51U15*Reading_EyesImage 17|60b15
 51a34 L 17|60b34 62m46
 58E10*HeadPosition_Samples_Index 60r46 17|339r13
 58N41*x
 58N43*y
-59I10*HeadPosition_Samples_Values 61r45 17|234r32 234r63 238r32 238r63
-60A10*HeadPosition_Samples_Type 17|201r47 214r46 16|63r44 236r49 17|208r44
-. 16|121r47 17|333r43
+59I10*HeadPosition_Samples_Values 17|234r32 234r63 238r32 238r63 16|61r45
+60A10*HeadPosition_Samples_Type 17|208r44 16|63r44 121r47 232r49 17|201r47
+. 214r46 333r43
 63U15*Reading_HeadPosition 17|208b15
 63a37 H 17|208b37 210m52
 70I10*Distance_Samples_Type 17|109r40 115r42 135r32 139r32 16|72r40 109r36
-. 197r76 17|102r43 306r32
+. 17|102r43 306r32 16|193r76
 72U15*Reading_Distance 17|109b15
 72i33 L 17|109b33 111m45
-78I10*Speed_Samples_Type 17|152r40 159r37 165r39 185r32 189r32 315r29 16|80r37
-. 113r33 160r76
+78I10*Speed_Samples_Type 17|165r39 16|113r33 156r76 17|152r40 159r37 185r32
+. 189r32 315r29 16|80r37
 80U15*Reading_Speed 17|159b15
 80i30 V 17|159b30 161m42
-86I10*Steering_Samples_Type 17|250r43 257r40 283r32 16|88r40 17|263r42 287r32
-. 324r32 16|117r36 274r72
+86I10*Steering_Samples_Type 88r40 17|250r43 263r42 283r32 16|117r36 270r72
+. 17|257r40 287r32 324r32
 88U15*Reading_Steering 17|257b15
 88i33 S 17|257b33 259m43
-95F10*Values_Pulse_Rate 97r38 17|297r34
+95F10*Values_Pulse_Rate 17|297r34 16|97r38
 97U15*Display_Pulse_Rate 17|297b11
 97f35 P 17|297b31 302r30
 101U15*Display_Electrodes_Sample 17|345b11
@@ -166,47 +164,43 @@ X 16 devices.ads
 117i33 S 17|324b29 329r30
 121U15*Display_HeadPosition_Sample 17|333b11
 121a44 H 17|333b40 340r33
-125U15*Display_Symptom 17|376b11
-125R32 Symptom 17|376b28 381r9
-129U15*Display_Cronometro 17|385b11
-129O35 Origen 17|385b31 391r45
-129O63 Hora 17|385b60 391r38
-133I10*Volume 134r24 17|407r20 417r8
-134U15*Beep 17|407b11
-134i21 v 17|407b17 413r15 417r21
-138E10*Light_States 17|395r21 16|139r25
-138N27*On 17|399r14
-138N31*Off 17|400r14
-139U15*Light 17|395b11
-139e22 E 17|395b18 398r9
-143U15*Activate_Automatic_Driving 17|423b11
-147U15*Activate_Brake 17|431b11
-158N5*cantidad_datos_Velocidad 159r44
-159M10*Indice_Secuencia_Velocidad 17|155r10 170r15 179r13 182r15 16|160r45
-. 17|188r24
-160A10*tipo_Secuencia_Velocidad 162r23 17|156r18
-162a5*Speed_Simulation 17|156r46
-195N5*cantidad_datos_Distancia 196r44
-196M10*Indice_Secuencia_Distancia 17|120r15 129r13 16|197r45 17|105r10 132r15
-. 138r24
-197A10*tipo_Secuencia_Distancia 199r26 17|106r18
-199a5*Distance_Simulation 17|106r46
-233N5*cantidad_datos_HeadPosition 234r47
-234M10*Indice_Secuencia_HeadPosition 235r48 17|204r10 219r15 231r15 237r24
-235A10*tipo_Secuencia_HeadPosition 238r30 17|205r18
-238a5*HeadPosition_Simulation 17|205r49
-272N5*cantidad_datos_Volante 273r42
-273M10*Indice_Secuencia_Volante 274r43 17|253r10 268r15 277r13 280r15 286r24
-274A10*tipo_Secuencia_Volante 276r26 17|254r18
-276a5*Steering_Simulation 17|254r44
-310N5*cantidad_datos_EyesImage 311r44
-311M10*Indice_Secuencia_EyesImage 312r45 17|56r10 71r15 83r15 89r24
-312A10*tipo_Secuencia_EyesImage 314r22 17|57r18
-314a5*Eyes_Simulation 17|57r46
-348N5*cantidad_datos_Sensores 349r43
-349M10*Indice_Secuencia_Sensores 350r44 17|23r10 40r15
-350A10*tipo_Secuencia_Sensores 352r21 17|24r18
-352a5*EEG_Simulation 17|24r45
+125U15*Display_Cronometro 17|376b11
+125O35 Origen 17|376b31 382r45
+125O63 Hora 17|376b60 382r38
+129I10*Volume 17|398r20 408r8 16|130r24
+130U15*Beep 17|398b11
+130i21 v 17|398b17 404r15 408r21
+134E10*Light_States 135r25 17|386r21
+134N27*On 17|390r14
+134N31*Off 17|391r14
+135U15*Light 17|386b11
+135e22 E 17|386b18 389r9
+139U15*Activate_Automatic_Driving 17|414b11
+143U15*Activate_Brake 17|422b11
+154N5*cantidad_datos_Velocidad 155r44
+155M10*Indice_Secuencia_Velocidad 17|155r10 170r15 179r13 182r15 188r24 16|156r45
+156A10*tipo_Secuencia_Velocidad 158r23 17|156r18
+158a5*Speed_Simulation 17|156r46
+191N5*cantidad_datos_Distancia 192r44
+192M10*Indice_Secuencia_Distancia 193r45 17|105r10 120r15 129r13 132r15 138r24
+193A10*tipo_Secuencia_Distancia 195r26 17|106r18
+195a5*Distance_Simulation 17|106r46
+229N5*cantidad_datos_HeadPosition 230r47
+230M10*Indice_Secuencia_HeadPosition 231r48 17|204r10 219r15 231r15 237r24
+231A10*tipo_Secuencia_HeadPosition 234r30 17|205r18
+234a5*HeadPosition_Simulation 17|205r49
+268N5*cantidad_datos_Volante 269r42
+269M10*Indice_Secuencia_Volante 270r43 17|253r10 268r15 277r13 280r15 286r24
+270A10*tipo_Secuencia_Volante 272r26 17|254r18
+272a5*Steering_Simulation 17|254r44
+306N5*cantidad_datos_EyesImage 307r44
+307M10*Indice_Secuencia_EyesImage 308r45 17|56r10 71r15 83r15 89r24
+308A10*tipo_Secuencia_EyesImage 310r22 17|57r18
+310a5*Eyes_Simulation 17|57r46
+344N5*cantidad_datos_Sensores 345r43
+345M10*Indice_Secuencia_Sensores 346r44 17|23r10 40r15
+346A10*tipo_Secuencia_Sensores 348r21 17|24r18
+348a5*EEG_Simulation 17|24r45
 X 17 devices.adb
 11i5 EYES_REACTION_WHEN_BEEP
 20w15 Sensores_Electrodos 31r9
@@ -288,25 +282,25 @@ X 17 devices.adb
 350i8 i 351r35
 357i2 Average 366m4 367r7 368r10 369r10
 362e8 i 363r35
-386O8 Crono 391r8 391r20
-413i7 i
+377O8 Crono 382r8 382r20
+404i7 i
 X 20 kernel.ads
 36U9*Kernel 17|3r6 3r32
 X 25 kernel-serial_output.ads
 36U16*Serial_Output 17|3r13 3r39
 41U14*Put 17|300r4 301r4 309r4 310r4 318r4 319r4 327r4 328r4 337r4 338r4
-. 348r4 349r4 360r4 361r4 367r28 368r28 369r28 370r28 379r4 380r4 389r3 391r3
-. 399r21 400r21 412r3 414r5 416r3 417r3 426r4 434r4
+. 348r4 349r4 360r4 361r4 367r28 368r28 369r28 370r28 380r3 382r3 390r21
+. 391r21 403r3 405r5 407r3 408r3 417r4 425r4
 X 28 system.ads
 46U9*System 17|6r6 6r18
 X 49 tools.ads
 6U9*tools 17|7r6 7r17
 8O5*Big_Bang 17|39r46 70r46 82r46 119r46 131r46 169r46 181r46 218r46 230r46
-. 267r46 279r46 299r18 308r18 317r18 326r18 336r18 347r18 359r18 378r18 388r17
-. 397r18 410r17 425r18 433r18
-10U15*Current_Time 17|299r4 308r4 317r4 326r4 336r4 347r4 359r4 378r4 388r3
-. 397r4 410r3 425r4 433r4
+. 267r46 279r46 299r18 308r18 317r18 326r18 336r18 347r18 359r18 379r17 388r18
+. 401r17 416r18 424r18
+10U15*Current_Time 17|299r4 308r4 317r4 326r4 336r4 347r4 359r4 379r3 388r4
+. 401r3 416r4 424r4
 11U15*Print_an_Integer 17|302r4 311r4 320r4 329r4 340r7 351r7 363r7
 15U15*Execution_Time 17|43r10 74r10 123r10 173r10 222r10 271r10 303r4 312r4
-. 321r4 330r4 342r4 353r4 373r4 382r4 402r4 418r3 427r4 435r4
+. 321r4 330r4 342r4 353r4 373r4 393r4 409r3 418r4 426r4
 

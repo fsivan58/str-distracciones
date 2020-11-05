@@ -122,10 +122,6 @@ package devices is
     -- It displays the angle of the head position in both axis (x and y) 
 
     ---------------------------------------------------------------------
-    procedure Display_Symptom (Symptom: in Unbounded_String);
-    -- It displays the symptom passed by parameter
-
-    ---------------------------------------------------------------------
     procedure Display_Cronometro (Origen: Ada.Real_Time.Time; Hora: Ada.Real_Time.Time);
     -- It displays a chronometer 
 
