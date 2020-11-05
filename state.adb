@@ -14,7 +14,7 @@ package body State is
     task body Display is
         Siguiente_Instante: Time;
     begin
-        Siguiente_Instante := Clock + Milliseconds(1000);
+        Siguiente_Instante := Big_Bang + Milliseconds(1000);
         loop
             Starting_Notice ("Display");
             Symptoms.Show_Symptoms;

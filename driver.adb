@@ -15,7 +15,7 @@ package body Driver is
         Recommended_Distance: float;
         Siguiente_Instante: Time;
     begin
-        Siguiente_Instante := Clock + Milliseconds(300);
+        Siguiente_Instante := Big_Bang + Milliseconds(300);
         loop
             Starting_Notice ("Distance");
             Measures.Write_Distance;
