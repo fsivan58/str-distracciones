@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnvvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U driver%b		driver.adb		3BDF15D7 PK
+U driver%b		driver.adb		0D4C587C PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -11,7 +11,7 @@ W ada.real_time.delays%s  a-retide.adb		a-retide.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
-W devices%s		devices.adb		devices.ali  ED
+W devices%s		devices.adb		devices.ali
 W kernel%s		kernel.ads		kernel.ali
 W kernel.serial_output%s  kernel-serial_output.adb  kernel-serial_output.ali
 W system%s		system.ads		system.ali
@@ -27,7 +27,7 @@ W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
-W devices%s		devices.adb		devices.ali  ED
+W devices%s		devices.adb		devices.ali
 W priorities%s		priorities.ads		priorities.ali
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
@@ -54,7 +54,7 @@ D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
 D devices.ads		20201105163501 48AB7E58
 D driver.ads		20201105163608 3653FED0
-D driver.adb		20201105171849 392AF9B4
+D driver.adb		20201106061100 0FB9B41F
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -65,7 +65,7 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201105163937 59853DC0
+D priorities.ads	20201106052505 59853DC0
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47
@@ -94,9 +94,8 @@ X 1 ada.ads
 X 8 a-reatim.ads
 43U13*Real_Time 19|2r10 2r29
 45O9*Time 19|16r29 47r29 71r29
-57U13*Clock 19|18r31
-59U13*"+" 19|18r37 39r54 49r40 63r54 73r40 91r54
-89U13*Milliseconds 19|18r39 39r56 49r42 63r56 73r42 91r56
+59U13*"+" 19|18r40 39r54 49r40 63r54 73r40 91r54
+89U13*Milliseconds 19|18r42 39r56 49r42 63r56 73r42 91r56
 X 11 a-string.ads
 18U13*Strings 18|3r10 3r37 4r10 4r45 19|3r10 3r37 4r10 4r45
 X 13 a-strunb.ads
@@ -110,7 +109,7 @@ X 17 devices.ads
 7U9*devices 18|2r6 2r19 19|8r6 8r19
 20O5*WCET_Display 19|172r29
 58N41*x 19|82r33 82r59
-58N43*y 19|83r29 83r55
+58N43*y 19|83r25 83r47 84r25 84r47
 60A10*HeadPosition_Samples_Type 18|32r49 43r23 19|68r21 69r20 151r49
 63U15*Reading_HeadPosition 19|148r13
 70I10*Distance_Samples_Type 18|48r45 55r19 19|13r20 186r45
@@ -121,15 +120,14 @@ X 17 devices.ads
 88U15*Reading_Steering 19|158r13
 109U15*Display_Distance 19|198r13
 113U15*Display_Speed 19|213r13
-130U15*Beep 19|86r17
 X 18 driver.ads
 6U9*Driver 19|10b14
 8t10*Distance
 12t10*Steering
 16t10*Head
 20w15*Symptoms 19|27r17 29r17 31r17 33r17 34r17 35r17 53r13 55r13 58r17 59r18
-. 77r13 78r13 79r13 80r13 85r17 87r18
-21U19 Write_Head_Symptom 19|85r26 87r27 96b19
+. 77r13 78r13 79r13 80r13 86r17 87r18
+21U19 Write_Head_Symptom 19|86r26 87r27 96b19
 21e39 Value 19|96b39 98r29
 22U19 Read_Head_Symptom 19|101b19
 22e38 Value 19|101b38 103r13
@@ -185,9 +183,9 @@ X 19 driver.adb
 45i9 Current_S 52r27 55m37 57r29
 46i9 Speed 56m34 57r53
 47O9 Siguiente_Instante 49m9 62r25 63m13 63r35
-68a9 Previous_H 76m13 82r22 83r18
-69a9 Current_H 76r27 79m41 82r49 83r45
-70i9 Current_S 80m37 83r71
+68a9 Previous_H 76m13 82r22 83r14 84r14
+69a9 Current_H 76r27 79m41 82r49 83r37 84r37
+70i9 Current_S 80m37 83r59 84r59
 71O9 Siguiente_Instante 73m9 90r25 91m13 91r35
 X 22 kernel.ads
 36U9*Kernel 19|1r6 1r32
@@ -203,7 +201,7 @@ X 31 system.ads
 46U9*System 19|5r6 5r18
 X 52 tools.ads
 6U9*tools 19|7r6 7r17
-8O5*Big_Bang 19|49r31 73r31 168r27
+8O5*Big_Bang 19|18r31 49r31 73r31 168r27
 10U15*Current_Time 19|168r13
 13U15*Starting_Notice 19|20r13 51r13 75r13
 14U15*Finishing_Notice 19|37r13 61r13 89r13

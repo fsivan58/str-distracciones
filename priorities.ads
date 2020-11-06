@@ -2,10 +2,10 @@
 package Priorities is
 
     Sporadic_Priority : constant integer := 20;
-    Head_Priority : constant integer := 19;      -- 400 ms
-    Risk_Priority : constant integer := 18;      -- 150 ms
-    Distance_Priority : constant integer := 17;  -- 300 ms
-    Steering_Priority : constant integer := 16;  -- 350 ms
-    Display_Priority : constant integer := 15;   -- 1000 ms
+    Head_Priority : constant integer := 19;      -- d=100, t=400
+    Risk_Priority : constant integer := 18;      -- d=150, t=150
+    Distance_Priority : constant integer := 17;  -- d=300, t=300
+    Steering_Priority : constant integer := 16;  -- d=350, t=350
+    Display_Priority : constant integer := 15;   -- d=1000, t=1000
 
 end Priorities;

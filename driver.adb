@@ -84,7 +84,6 @@ package body Driver is
             (Previous_H(y) < 30 and Current_H(y) < 30 and Current_S < 30))
             then
                 Symptoms.Write_Head_Symptom (True);
-                Beep(4);
             else Symptoms.Write_Head_Symptom (False);
             end if;
             Finishing_Notice ("Head");

@@ -7,7 +7,6 @@ with Tools; use Tools;
 with Devices; use Devices;
 with Driver; use Driver;
 with Ada.Interrupts.Names;
-with Pulse_Interrupt; use Pulse_Interrupt;
 
 package body State is
 
@@ -39,7 +38,7 @@ package body State is
         Siguiente_Instante := Big_Bang + Milliseconds(150);
         loop
             delay until Siguiente_Instante;
-            Siguiente_Instante := Clock + Milliseconds(150);
+            Siguiente_Instante := Siguiente_Instante + Milliseconds(150);
 
             Starting_Notice ("Risks");
             Symptoms.Read_Steering_Symptom (Volantazo);

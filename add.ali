@@ -3,13 +3,14 @@ A -g
 P LC TF
 R nnvvrnnvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U add%b			add.adb			0BB36F12 PK IL
+U add%b			add.adb			2102BAEA PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W devices%s		devices.adb		devices.ali
 W driver%s		driver.adb		driver.ali
 W kernel%s		kernel.ads		kernel.ali
 W kernel.serial_output%s  kernel-serial_output.adb  kernel-serial_output.ali
+W pulse_interrupt%s	pulse_interrupt.adb	pulse_interrupt.ali
 W state%s		state.adb		state.ali
 W system%s		system.ads		system.ali
 W tools%s		tools.adb		tools.ali  ED
@@ -34,7 +35,7 @@ D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
 D add.ads		20201014171418 204085E0
-D add.adb		20201104171524 3CE81DB3
+D add.adb		20201106052607 2FCA424F
 D devices.ads		20201105163501 48AB7E58
 D driver.ads		20201105163608 3653FED0
 D interfac.ads		20000718095948 0357E00A
@@ -47,7 +48,8 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201105163937 59853DC0
+D priorities.ads	20201106052505 59853DC0
+D pulse_interrupt.ads	20201104193606 39938A04
 D state.ads		20201105172111 74258DEC
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
@@ -79,8 +81,8 @@ X 1 ada.ads
 X 10 a-reatim.ads
 43U13*Real_Time 19|3r10 3r29
 X 18 add.ads
-1U9*add 19|11b14
-2U13*Background 19|13b15
+1U9*add 19|13b14
+2U13*Background 19|15b15
 X 20 devices.ads
 7U9*devices 19|7r6 7r19
 X 21 driver.ads
@@ -89,12 +91,14 @@ X 24 kernel.ads
 36U9*Kernel 19|2r6 2r32
 X 29 kernel-serial_output.ads
 36U16*Serial_Output 19|2r13 2r39
-X 33 state.ads
+X 33 pulse_interrupt.ads
+5U9*pulse_interrupt 19|11r6 11r27
+X 34 state.ads
 6U9*State 19|9r6 9r17
-X 34 system.ads
+X 35 system.ads
 46U9*System 19|4r6 4r18
-X 57 tools.ads
+X 58 tools.ads
 6U9*tools 19|6r6 6r17
-13U15*Starting_Notice 19|21r5
-14U15*Finishing_Notice 19|22r5
+13U15*Starting_Notice 19|23r5
+14U15*Finishing_Notice 19|24r5
 
