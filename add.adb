@@ -4,7 +4,6 @@ with Ada.Real_Time; use Ada.Real_Time;
 with System; use System;
 
 with Tools; use Tools;
-with Devices; use Devices;
 with Driver; use Driver;
 with State; use State;
 

@@ -4,7 +4,7 @@ with Ada.Real_Time; use Ada.Real_Time;
 with System; use System;
 
 with Tools; use Tools;
-with Devices; use Devices;
+with Devices1; use Devices1;
 with Driver; use Driver;
 with Ada.Interrupts.Names;
 

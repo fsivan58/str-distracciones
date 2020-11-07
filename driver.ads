@@ -1,5 +1,5 @@
 with Priorities; use Priorities;
-with Devices; use Devices;
+with Devices1; use Devices1;
 with ada.strings.unbounded; use ada.strings.unbounded;
 with ada.strings.unbounded.text_io; use ada.strings.unbounded.text_io;
 

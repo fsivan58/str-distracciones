@@ -1,7 +1,7 @@
 Archive member included       because of file (symbol)
 
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(a-reatim.o)
-                              ./devices.o (ada__real_time__clock)
+                              ./devices1.o (ada__real_time__clock)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(a-retide.o)
                               ./pulse_interrupt.o (ada__real_time__delays__delay_until)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-interr.o)
@@ -9,7 +9,7 @@ Archive member included       because of file (symbol)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-osinte.o)
                               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-interr.o) (system__os_interface__attach_handler)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-taprob.o)
-                              ./devices.o (system__tasking__protected_objects__initialize_protection)
+                              ./devices1.o (system__tasking__protected_objects__initialize_protection)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-taprop.o)
                               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(a-retide.o) (system__task_primitives__operations__self)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-tarest.o)
@@ -105,9 +105,9 @@ Archive member included       because of file (symbol)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-finroo.o)
                               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-suteio.o) (system__finalization_root__empty_root_controlledP)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-imgint.o)
-                              ./devices.o (system__img_int__image_integer)
+                              ./devices1.o (system__img_int__image_integer)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-imgrea.o)
-                              ./devices.o (system__img_real__image_ordinary_fixed_point)
+                              ./devices1.o (system__img_real__image_ordinary_fixed_point)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-imguns.o)
                               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-imgrea.o) (system__img_uns__set_image_unsigned)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-mastop.o)
@@ -235,7 +235,7 @@ Archive member included       because of file (symbol)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/libgcc.a(_cmpdi2.o)
                               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(a-reatim.o) (__cmpdi2)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/libgcc.a(_divdi3.o)
-                              ./devices.o (__divdi3)
+                              ./devices1.o (__divdi3)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/libgcc.a(_divsi3.o)
                               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-tasdeb.o) (udiv)
 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/libgcc.a(_fixsfdi.o)
@@ -321,7 +321,7 @@ Archive member included       because of file (symbol)
 /usr/local/openravenscar/sparc-ork-elf/lib/libc.a(memcmp.o)
                               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-interr.o) (memcmp)
 /usr/local/openravenscar/sparc-ork-elf/lib/libc.a(memcpy.o)
-                              ./devices.o (memcpy)
+                              ./devices1.o (memcpy)
 /usr/local/openravenscar/sparc-ork-elf/lib/libc.a(memset.o)
                               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/libgcc.a(frame.o) (memset)
 /usr/local/openravenscar/sparc-ork-elf/lib/libc.a(mlock.o)
@@ -473,15 +473,14 @@ interfaces__c_streams__seek_set
 driver__head        0x8               ./driver.o
 ada__finalization__controlledB
                     0x24              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-finali.o)
-devices__wcet_speed
-                    0x8               ./devices.o
 pulse_interrupt__interr_9
                     0x8               ./pulse_interrupt.o
-devices__wcet_eeg   0x8               ./devices.o
 ada__finalization__limited_controlledT
                     0x30              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-finali.o)
 interfaces__c_streams__iolbf
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(i-cstrea.o)
+devices1__wcet_steering
+                    0x8               ./devices1.o
 interfaces__c_streams__ionbf
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(i-cstrea.o)
 errno               0x4               /usr/local/openravenscar/sparc-ork-elf/lib/libc.a(sbrkr.o)
@@ -505,8 +504,6 @@ pulse_interrupt__interr_10
                     0x8               ./pulse_interrupt.o
 kernel__peripherals__registers__protected_segment_2_base_register
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(kernel-peripherals-registers.o)
-devices__wcet_distance
-                    0x8               ./devices.o
 ada__finalization__list_controller__list_controllerT
                     0x30              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-filico.o)
 system__exception_table__exception_htable__iterator_indexXn
@@ -525,8 +522,6 @@ system__file_io__temp_file_record__T1b___U
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-fileio.o)
 system__finalization_implementation__record_controllerB
                     0x28              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-finimp.o)
-devices__wcet_automatic_driving
-                    0x8               ./devices.o
 system__exceptions__all_others_dummy_exception
                     0x14              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-except.o)
 interfaces__c_streams__eof
@@ -556,19 +551,19 @@ ada__streams__root_stream_typeT
                     0x14              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-stream.o)
 interfaces__c_streams__iofbf
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(i-cstrea.o)
-devices__wcet_alarm
-                    0x8               ./devices.o
 kernel__peripherals__timer_control_mirror
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(kernel-peripherals.o)
 driver__symptoms    0x20              ./driver.o
-devices__wcet_steering
-                    0x8               ./devices.o
 state__display      0x8               ./state.o
-devices__wcet_display
-                    0x8               ./devices.o
 system__file_control_block__afcb_ptrL
                     0x28              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-ficobl.o)
+devices1__wcet_brake
+                    0x8               ./devices1.o
+devices1__wcet_headposition
+                    0x8               ./devices1.o
 driver___chain      0x4               ./driver.o
+devices1__wcet_speed
+                    0x8               ./devices1.o
 system__finalization_root__empty_root_controlledB
                     0x1c              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-finroo.o)
 kernel__threads__queues__thread_list
@@ -594,6 +589,8 @@ system__interrupts__user_handler
                     0xb4              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-interr.o)
 ada__text_io__standard_in_afcb
                     0x48              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-textio.o)
+devices1__wcet_eyes_image
+                    0x8               ./devices1.o
 driver__distance    0x8               ./driver.o
 pulse_interrupt__interr_8
                     0x8               ./pulse_interrupt.o
@@ -609,12 +606,10 @@ system__soft_links__nt_exc_stack
                     0x2008            /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-soflin.o)
 interfaces__c_streams__l_tmpnam
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(i-cstrea.o)
-devices__wcet_light
-                    0x8               ./devices.o
+devices1__wcet_light
+                    0x8               ./devices1.o
 system__tasking__protected_objects__single_entry__protection_entry_accessM
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnarl.a(s-tposen.o)
-devices__wcet_headposition
-                    0x8               ./devices.o
 state__risks        0x8               ./state.o
 pulse_interrupt__interr_3
                     0x8               ./pulse_interrupt.o
@@ -649,10 +644,16 @@ system__exception_table__exception_htable__tableXn
                     0x94              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-exctab.o)
 system__exceptions__others_dummy_exception
                     0x14              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-except.o)
+devices1__wcet_automatic_driving
+                    0x8               ./devices1.o
 ada__text_io__current_err
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-textio.o)
+devices1__wcet_distance
+                    0x8               ./devices1.o
 ada__strings__maps__null_set
                     0x20              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-strmap.o)
+devices1__wcet_alarm
+                    0x8               ./devices1.o
 driver__steering    0x8               ./driver.o
 system__finalization_implementation__limited_record_controllerB
                     0x24              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-finimp.o)
@@ -668,14 +669,10 @@ pulse_interrupt__interrupt
                     0x8               ./pulse_interrupt.o
 system__file_io__file_io_clean_up_typeT
                     0x38              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(s-fileio.o)
-devices__wcet_eyes_image
-                    0x8               ./devices.o
 interfaces__c_streams__seek_end
                     0x4               /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(i-cstrea.o)
 ada__text_io__standard_out_afcb
                     0x48              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-textio.o)
-devices__wcet_brake
-                    0x8               ./devices.o
 ada__strings__unbounded__unbounded_stringB
                     0x28              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-strunb.o)
 system__interrupts__reserve
@@ -699,6 +696,9 @@ ada__finalization__list_controller__list_controllerB
                     0x28              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(a-filico.o)
 gnat__exceptions__exception_typeT
                     0x2c              /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/adalib/libgnat.a(g-except.o)
+devices1__wcet_display
+                    0x8               ./devices1.o
+devices1__wcet_eeg  0x8               ./devices1.o
 state__sporadic_taskI
                     0x8               ./state.o
 ada__finalization__list_controller__simple_list_controllerB
@@ -745,33 +745,33 @@ Linker script and memory map
                 0x02001788                pulse_interrupt___elabs
                 0x0200170c                pulse_interrupt___init_proc
                 0x020019dc                pulse_interrupt__interruptTKB
- .text          0x02001cb0     0x50d8 ./devices.o
-                0x0200530c                devices___init_proc__6
-                0x02005fbc                devices__display_distance
-                0x02006264                devices__display_electrodes_sample
-                0x02001e4c                devices__reading_sensors
-                0x02003bec                devices__reading_speed
-                0x02006178                devices__display_headposition_sample
-                0x020060e4                devices__display_steering
-                0x02004758                devices___init_proc__5
-                0x02001dec                devices___init_proc
-                0x02002fc0                devices___init_proc__3
-                0x020069dc                devices(bool,...)(...)( *)
-                0x0200245c                devices__reading_eyesimage
-                0x02006050                devices__display_speed
-                0x02006d10                devices___elabb
-                0x02006cb4                devices__activate_brake
-                0x0200536c                devices__reading_steering
-                0x0200657c                devices__display_cronometro
-                0x020068f4                devices__light
-                0x02003b8c                devices___init_proc__4
-                0x020047b8                devices__reading_headposition
-                0x02003020                devices__reading_distance
-                0x02006c58                devices__activate_automatic_driving
-                0x020023fc                devices___init_proc__2
-                0x02001cb0                devices___elabs
-                0x02006350                devices__display_eyes_sample
-                0x02005ed8                devices__display_pulse_rate
+ .text          0x02001cb0     0x50d8 ./devices1.o
+                0x02003020                devices1__reading_distance
+                0x0200536c                devices1__reading_steering
+                0x02005ed8                devices1__display_pulse_rate
+                0x02001e4c                devices1__reading_sensors
+                0x020023fc                devices1___init_proc__2
+                0x02006178                devices1__display_headposition_sample
+                0x02006d10                devices1___elabb
+                0x02005fbc                devices1__display_distance
+                0x0200657c                devices1__display_cronometro
+                0x020069dc                devices1(bool,...)(...)( *)
+                0x02003bec                devices1__reading_speed
+                0x020068f4                devices1__light
+                0x020060e4                devices1__display_steering
+                0x02004758                devices1___init_proc__5
+                0x02002fc0                devices1___init_proc__3
+                0x02001cb0                devices1___elabs
+                0x0200245c                devices1__reading_eyesimage
+                0x02006350                devices1__display_eyes_sample
+                0x02006050                devices1__display_speed
+                0x02006cb4                devices1__activate_brake
+                0x020047b8                devices1__reading_headposition
+                0x02006c58                devices1__activate_automatic_driving
+                0x02003b8c                devices1___init_proc__4
+                0x0200530c                devices1___init_proc__6
+                0x02001dec                devices1___init_proc
+                0x02006264                devices1__display_electrodes_sample
  .text          0x02006d88      0x9a8 ./workload.o
                 0x02006d88                workload___elabs
                 0x02007188                workload__small_whetstone
@@ -2372,7 +2372,7 @@ Linker script and memory map
                 0x02044ba0                .=ALIGN(0x10)
  *(.rodata)
  .rodata        0x02044ba0       0x38 ./pulse_interrupt.o
- .rodata        0x02044bd8      0x23c ./devices.o
+ .rodata        0x02044bd8      0x23c ./devices1.o
  *fill*         0x02044e14        0x4
  .rodata        0x02044e18       0x4c ./workload.o
  *fill*         0x02044e64        0x4
@@ -2533,22 +2533,21 @@ Linker script and memory map
  .data          0x02048958      0x298 b~main.o
                 0x020489ac                ada__exceptionsS
                 0x020489dc                system__secondary_stackB
-                0x02048ad4                devicesS
-                0x02048aec                ada__strings__mapsB
+                0x02048af4                ada__strings__mapsB
                 0x02048ac0                system__tasking__debugB
                 0x0204898c                system__arith_64B
-                0x02048b48                system__img_realB
+                0x02048b58                system__img_realB
                 0x0204896c                addS
                 0x020489e4                system__parametersB
                 0x02048998                gnat__exceptionsS
                 0x02048a10                system__finalization_rootS
                 0x020489cc                system__machine_state_operationsB
-                0x02048b34                system__file_control_blockS
+                0x02048b3c                system__file_control_blockS
                 0x02048a6c                kernel__interruptsS
                 0x02048ac4                system__tasking__debugS
                 0x02048a48                kernel__threads__protectionS
-                0x02048b90                system__exn_fltS
-                0x02048ba8                ada__real_time__delaysB
+                0x02048ba0                system__exn_fltS
+                0x02048ad8                ada__real_time__delaysB
                 0x02048a84                system__finalization_implementationS
                 0x02048bb0                prioritiesS
                 0x02048990                system__arith_64S
@@ -2556,78 +2555,79 @@ Linker script and memory map
                 0x02048bb8                system__tasking__restricted__stagesS
                 0x02048a4c                kernel__cpu_primitivesB
                 0x02048ab0                system__taskingB
-                0x02048ae8                ada__strings__fixedS
+                0x02048af0                ada__strings__fixedS
                 0x02048988                kernel__parametersS
-                0x02048b18                ada__strings__unbounded__auxS
+                0x02048b20                ada__strings__unbounded__auxS
                 0x02048bd8                ada__interruptsS
                 0x02048ac8                interfaces__cB
-                0x02048b00                ada__characters__latin_1S
+                0x02048b08                ada__characters__latin_1S
                 0x02048aa8                system__os_primitivesB
                 0x02048bbc                system__tasking__restrictedS
-                0x02048b74                toolsS
+                0x02048b84                toolsS
                 0x02048a90                system__task_primitives__operationsB
                 0x0204895c                mainB
                 0x020489fc                system__tracebackB
-                0x02048b40                system__img_intB
+                0x02048b50                system__img_intB
                 0x02048960                system__standard_libraryB
                 0x02048a24                system__task_primitivesS
                 0x020489c4                gnat__htableS
-                0x02048af8                system__bit_opsS
-                0x02048b50                system__fat_llfS
-                0x02048afc                ada__charactersS
+                0x02048b00                system__bit_opsS
+                0x02048b60                system__fat_llfS
+                0x02048b04                ada__charactersS
                 0x02048a50                kernel__cpu_primitivesS
                 0x02048a68                kernel__interruptsB
-                0x02048b88                ada__numerics__elementary_functionsS
+                0x02048b98                ada__numerics__elementary_functionsS
                 0x02048964                system__standard_libraryS
                 0x020489e8                system__parametersS
-                0x02048b7c                workloadS
+                0x02048b8c                workloadS
                 0x020489d4                system__storage_elementsB
                 0x02048a98                kernel__threads__atcbB
                 0x020489d8                system__storage_elementsS
                 0x02048a60                kernel__timeB
                 0x02048994                gnatS
-                0x02048ae0                ada__strings__unboundedS
+                0x02048ae8                ada__strings__unboundedS
                 0x02048a54                system__machine_codeS
                 0x02048be8                system__tasking__protected_objects__single_entryS
                 0x02048be4                system__tasking__protected_objects__single_entryB
-                0x02048bac                ada__real_time__delaysS
-                0x02048b04                ada__strings__searchB
+                0x02048adc                ada__real_time__delaysS
+                0x02048b0c                ada__strings__searchB
                 0x02048aa0                system__os_interfaceB
-                0x02048b44                system__img_intS
+                0x02048b54                system__img_intS
                 0x02048a3c                kernel__peripheralsS
-                0x02048b54                system__img_lluB
+                0x02048b64                system__img_lluB
                 0x02048ab8                system__task_infoB
                 0x020489b0                gnat__heap_sort_aB
-                0x02048b80                ada__numericsS
+                0x02048b90                ada__numericsS
                 0x02048a94                system__task_primitives__operationsS
-                0x02048af0                ada__strings__mapsS
+                0x02048af8                ada__strings__mapsS
                 0x02048abc                system__task_infoS
-                0x02048b9c                system__fat_fltS
-                0x02048b64                system__powten_tableS
+                0x02048bac                system__fat_fltS
+                0x02048b74                system__powten_tableS
                 0x02048978                ada__real_timeS
                 0x02048bdc                system__interruptsB
                 0x02048be0                system__interruptsS
                 0x02048a5c                kernel__threads__queuesS
-                0x02048b6c                system__tasking__protected_objectsS
-                0x02048ad8                ada__stringsS
+                0x02048b7c                system__tasking__protected_objectsS
+                0x02048ae0                ada__stringsS
                 0x02048980                systemS
                 0x02048a18                system__stream_attributesS
                 0x02048a64                kernel__timeS
                 0x02048a88                system__string_ops_concat_3B
                 0x02048a58                kernel__threads__queuesB
-                0x02048ba0                driverB
-                0x02048b20                ada__text_ioS
+                0x02048ad0                driverB
+                0x02048b28                ada__text_ioS
                 0x02048acc                interfaces(char, signed)
                 0x020489c8                system__exceptionsS
-                0x02048b1c                ada__text_ioB
+                0x02048b24                ada__text_ioB
                 0x02048a34                kernel__memoryS
                 0x02048984                kernelS
                 0x02048974                ada__real_timeB
                 0x02048a08                system__string_opsS
                 0x02048a78                ada__finalizationB
-                0x02048b08                ada__strings__searchS
+                0x02048b10                ada__strings__searchS
                 0x02048bcc                stateB
-                0x02048b38                kernel__serial_outputB
+                0x02048b44                devices1S
+                0x02048b48                kernel__serial_outputB
                 0x02048a28                kernel__threadsB
                 0x020489f4                system__stack_checkingB
                 0x020489d0                system__machine_state_operationsS
@@ -2638,39 +2638,39 @@ Linker script and memory map
                 0x02048bec                ada__interrupts__namesS
                 0x02048a44                kernel__threads__protectionB
                 0x02048a7c                ada__finalizationS
-                0x02048b30                system__file_ioS
-                0x02048b14                ada__strings__unbounded__auxB
+                0x02048b38                system__file_ioS
+                0x02048b1c                ada__strings__unbounded__auxB
                 0x02048a38                kernel__peripheralsB
                 0x020489b4                gnat__heap_sort_aS
-                0x02048b8c                ada__numerics__auxS
-                0x02048b78                workloadB
+                0x02048b9c                ada__numerics__auxS
+                0x02048b88                workloadB
                 0x020489bc                system__exception_tableS
                 0x020489a4                ada__tagsS
                 0x02048aac                system__os_primitivesS
-                0x02048b4c                system__img_realS
-                0x02048b84                ada__numerics__elementary_functionsB
-                0x02048ae4                ada__strings__fixedB
-                0x02048b10                ada__strings__unbounded__text_ioS
+                0x02048b5c                system__img_realS
+                0x02048b94                ada__numerics__elementary_functionsB
+                0x02048b40                devices1B
+                0x02048aec                ada__strings__fixedB
+                0x02048b18                ada__strings__unbounded__text_ioS
                 0x02048a14                system__stream_attributesB
                 0x0204899c                ada__streamsS
                 0x020489a0                ada__tagsB
-                0x02048b28                interfaces__c_streamsS
+                0x02048b30                interfaces__c_streamsS
                 0x02048a04                system__string_opsB
-                0x02048b58                system__img_lluS
-                0x02048ad0                devicesB
-                0x02048b60                system__img_unsS
+                0x02048b68                system__img_lluS
+                0x02048b70                system__img_unsS
                 0x02048a74                ada__finalization__list_controllerS
                 0x02048bc8                force_external_interrupt_2B
                 0x02048a2c                kernel__threadsS
-                0x02048ba4                driverS
-                0x02048b5c                system__img_unsB
+                0x02048ad4                driverS
+                0x02048b6c                system__img_unsB
                 0x020489c0                gnat__htableB
-                0x02048adc                ada__strings__unboundedB
-                0x02048af4                system__bit_opsB
+                0x02048ae4                ada__strings__unboundedB
+                0x02048afc                system__bit_opsB
                 0x02048a8c                system__string_ops_concat_3S
                 0x02048a00                system__tracebackS
-                0x02048b3c                kernel__serial_outputS
-                0x02048b2c                system__file_ioB
+                0x02048b4c                kernel__serial_outputS
+                0x02048b34                system__file_ioB
                 0x020489ec                system__soft_linksB
                 0x02048a70                ada__finalization__list_controllerB
                 0x020489f8                system__stack_checkingS
@@ -2681,11 +2681,11 @@ Linker script and memory map
                 0x020489a8                ada__exceptionsB
                 0x02048958                ada_main_E
                 0x02048bb4                system__tasking__restricted__stagesB
-                0x02048b0c                ada__strings__unbounded__text_ioB
+                0x02048b14                ada__strings__unbounded__text_ioB
                 0x02048bd0                stateS
-                0x02048b68                system__tasking__protected_objectsB
+                0x02048b78                system__tasking__protected_objectsB
                 0x020489e0                system__secondary_stackS
-                0x02048b24                interfaces__c_streamsB
+                0x02048b2c                interfaces__c_streamsB
                 0x02048a80                system__finalization_implementationB
                 0x02048aa4                system__os_interfaceS
                 0x020489f0                system__soft_linksS
@@ -2694,9 +2694,9 @@ Linker script and memory map
                 0x020489b8                system__exception_tableB
                 0x02048968                addB
                 0x0204897c                interfacesS
-                0x02048b70                toolsB
-                0x02048b94                system__exn_genB
-                0x02048b98                system__exn_genS
+                0x02048b80                toolsB
+                0x02048ba4                system__exn_genB
+                0x02048ba8                system__exn_genS
  .data          0x02048bf0       0x18 ./priorities.o
                 0x02048bf4                priorities__head_priority
                 0x02048bf8                priorities__risk_priority
@@ -2709,18 +2709,18 @@ Linker script and memory map
                 0x02048c0c                pulse_interrupt__priority_of_external_interrupts_2
                 0x02048c14                pulse_interrupt__interruptTKZ
                 0x02048c10                pulse_interrupt__interruptTKE
- .data          0x02048c18     0x1ab0 ./devices.o
-                0x02048c1c                devices__number_electrodes
-                0x02048c18                devices_E
-                0x02049720                devices__eeg_simulation
-                0x020493f8                devices__eyes_samples_indexT
-                0x02048f40                devices__headposition_samples_indexT
-                0x02048f48                devices__headposition_simulation
-                0x02049400                devices__eyes_simulation
-                0x0204a6c0                devices__light_statesT
-                0x02049268                devices__steering_simulation
-                0x02048db0                devices__distance_simulation
-                0x02048c20                devices__speed_simulation
+ .data          0x02048c18     0x1ab0 ./devices1.o
+                0x0204a6c0                devices1__light_statesT
+                0x02049720                devices1__eeg_simulation
+                0x02048db0                devices1__distance_simulation
+                0x02048c20                devices1__speed_simulation
+                0x02048c18                devices1_E
+                0x020493f8                devices1__eyes_samples_indexT
+                0x02048c1c                devices1__number_electrodes
+                0x02049400                devices1__eyes_simulation
+                0x02048f40                devices1__headposition_samples_indexT
+                0x02049268                devices1__steering_simulation
+                0x02048f48                devices1__headposition_simulation
  .data          0x0204a6c8       0x38 ./workload.o
                 0x0204a6ec                workload__workload_failure
                 0x0204a6c8                workload_E
@@ -3188,7 +3188,7 @@ Linker script and memory map
 .bss            0x0204bf40   0x1d7b94
                 0x0204bf40                bss_start=.
  *(.bss)
- .bss           0x0204bf40     0x1af0 ./devices.o
+ .bss           0x0204bf40     0x1af0 ./devices1.o
  *fill*         0x0204da30       0xd0
  .bss           0x0204db00        0x8 ./tools.o
  *fill*         0x0204db08        0x8
@@ -3220,18 +3220,18 @@ Linker script and memory map
                 0x021a4a78                pulse_interrupt__interr_2
                 0x021a4a80                pulse_interrupt__interrupt
                 0x021a4a88                pulse_interrupt__interr_5
- COMMON         0x021a4a90       0x58 ./devices.o
-                0x021a4a90                devices__wcet_speed
-                0x021a4a98                devices__wcet_eeg
-                0x021a4aa0                devices__wcet_distance
-                0x021a4aa8                devices__wcet_automatic_driving
-                0x021a4ab0                devices__wcet_alarm
-                0x021a4ab8                devices__wcet_steering
-                0x021a4ac0                devices__wcet_display
-                0x021a4ac8                devices__wcet_light
-                0x021a4ad0                devices__wcet_headposition
-                0x021a4ad8                devices__wcet_eyes_image
-                0x021a4ae0                devices__wcet_brake
+ COMMON         0x021a4a90       0x58 ./devices1.o
+                0x021a4a90                devices1__wcet_steering
+                0x021a4a98                devices1__wcet_brake
+                0x021a4aa0                devices1__wcet_headposition
+                0x021a4aa8                devices1__wcet_speed
+                0x021a4ab0                devices1__wcet_eyes_image
+                0x021a4ab8                devices1__wcet_light
+                0x021a4ac0                devices1__wcet_automatic_driving
+                0x021a4ac8                devices1__wcet_distance
+                0x021a4ad0                devices1__wcet_alarm
+                0x021a4ad8                devices1__wcet_display
+                0x021a4ae0                devices1__wcet_eeg
  COMMON         0x021a4ae8        0x8 ./tools.o
                 0x021a4ae8                tools__big_bang
  COMMON         0x021a4af0       0x70 ./driver.o
@@ -3379,7 +3379,7 @@ Linker script and memory map
                                  0xfc (size before relaxing)
  .stab          0x02223cb4      0xe28 ./pulse_interrupt.o
                                 0xe34 (size before relaxing)
- .stab          0x02224adc     0x3c24 ./devices.o
+ .stab          0x02224adc     0x3c24 ./devices1.o
                                0x3c30 (size before relaxing)
  .stab          0x02228700     0x4cf8 ./driver.o
                                0x4d04 (size before relaxing)
@@ -3572,9 +3572,9 @@ Linker script and memory map
  .stab          0x0228135c      0x624 /usr/local/openravenscar/lib/gcc-lib/sparc-ork-elf/2.8.1/libgcc.a(frame.o)
                                 0x714 (size before relaxing)
 
-.stabstr        0x02281980    0xad0bb
+.stabstr        0x02281980    0xad221
  [.stabstr](*)
- .stabstr       0x02281980    0xad0bb ./main.o
+ .stabstr       0x02281980    0xad221 ./main.o
                                   0x0 (size before relaxing)
                 0x02223ad4                heap_start=bss_end
                 0x02400000                heap_end=RAM_END
@@ -3584,7 +3584,7 @@ LOAD ./main.o
 LOAD ./force_external_interrupt_2.o
 LOAD ./priorities.o
 LOAD ./pulse_interrupt.o
-LOAD ./devices.o
+LOAD ./devices1.o
 LOAD ./workload.o
 LOAD ./tools.o
 LOAD ./driver.o
@@ -3609,7 +3609,7 @@ OUTPUT(main elf32-sparc)
  .comment       0x00000024       0x12 ./force_external_interrupt_2.o
  .comment       0x00000036       0x12 ./priorities.o
  .comment       0x00000048       0x12 ./pulse_interrupt.o
- .comment       0x0000005a       0x12 ./devices.o
+ .comment       0x0000005a       0x12 ./devices1.o
  .comment       0x0000006c       0x12 ./workload.o
  .comment       0x0000007e       0x12 ./tools.o
  .comment       0x00000090       0x12 ./driver.o

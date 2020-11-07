@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnvvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U driver%b		driver.adb		0D4C587C PK
+U driver%b		driver.adb		2E50EC62 PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -11,7 +11,7 @@ W ada.real_time.delays%s  a-retide.adb		a-retide.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
-W devices%s		devices.adb		devices.ali
+W devices1%s		devices1.adb		devices1.ali
 W kernel%s		kernel.ads		kernel.ali
 W kernel.serial_output%s  kernel-serial_output.adb  kernel-serial_output.ali
 W system%s		system.ads		system.ali
@@ -22,12 +22,12 @@ W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W tools%s		tools.adb		tools.ali  ED
 
-U driver%s		driver.ads		46B62B86 PK
+U driver%s		driver.ads		05F5F3D6 PK
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
-W devices%s		devices.adb		devices.ali
+W devices1%s		devices1.adb		devices1.ali
 W priorities%s		priorities.ads		priorities.ali
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
@@ -52,9 +52,9 @@ D a-strunb.ads		20000718095948 23CE47B9
 D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
-D devices.ads		20201105163501 48AB7E58
-D driver.ads		20201105163608 3653FED0
-D driver.adb		20201106061100 0FB9B41F
+D devices1.ads		20201107160200 15A31668
+D driver.ads		20201107160044 28184EB0
+D driver.adb		20201107160527 6FE6D851
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -105,8 +105,8 @@ X 13 a-strunb.ads
 X 14 a-suteio.ads
 43U31*Text_IO 18|4r28 4r63 19|4r28 4r63
 51U14*Put 19|171r13
-X 17 devices.ads
-7U9*devices 18|2r6 2r19 19|8r6 8r19
+X 17 devices1.ads
+7U9*devices1 18|2r6 2r20 19|8r6 8r20
 20O5*WCET_Display 19|172r29
 58N41*x 19|82r33 82r59
 58N43*y 19|83r25 83r47 84r25 84r47
@@ -131,7 +131,7 @@ X 18 driver.ads
 21e39 Value 19|96b39 98r29
 22U19 Read_Head_Symptom 19|101b19
 22e38 Value 19|101b38 103r13
-23U19 Write_Distancia_Insegura 19|27r26 33r26 106b19
+23U19 Write_Distancia_Insegura 19|31r26 33r26 106b19
 23e45 Value 19|106b45 108r35
 24U19 Read_Distancia_Insegura 19|111b19
 24e44 Value 19|111b44 113r13
@@ -139,7 +139,7 @@ X 18 driver.ads
 25e47 Value 19|116b47 118r37
 26U19 Read_Distancia_Imprudente 19|121b19
 26e46 Value 19|121b46 123r13
-27U19 Write_Peligro_Colision 19|31r26 35r26 126b19
+27U19 Write_Peligro_Colision 19|27r26 35r26 126b19
 27e43 Value 19|126b43 128r33
 28U19 Read_Peligro_Colision 19|131b19
 28e42 Value 19|131b42 133r13
@@ -177,7 +177,7 @@ X 18 driver.ads
 X 19 driver.adb
 13i9 Current_D 23m37 26r23 28r26 30r26
 14i9 Current_V 24m34 25r45
-15f9 Recommended_Distance 25m13 26r36 28r45 30r45
+15f9 Recommended_Distance 25m13 26r42 28r45 30r39
 16O9 Siguiente_Instante 18m9 38r25 39m13 39r35
 44i9 Previous_S 52m13 57r16
 45i9 Current_S 52r27 55m37 57r29

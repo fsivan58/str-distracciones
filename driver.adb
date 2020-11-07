@@ -5,7 +5,7 @@ with ada.strings.unbounded.text_io; use ada.strings.unbounded.text_io;
 with System; use System;
 
 with Tools; use Tools;
-with Devices; use Devices;
+with Devices1; use Devices1;
 
 package body Driver is
 
@@ -23,12 +23,12 @@ package body Driver is
             Measures.Read_Distance (Current_D);
             Measures.Read_Speed (Current_V);
             Recommended_Distance := float ((Current_V/10)**2);
-            if (float(Current_D) < Recommended_Distance) then
-                Symptoms.Write_Distancia_Insegura (True);
+            if (float(Current_D) < float(Recommended_Distance)/float(3)) then
+                Symptoms.Write_Peligro_Colision (True);
             elsif (float(Current_D) < float(Recommended_Distance)/float(2)) then
                 Symptoms.Write_Distancia_Imprudente (True);
-            elsif (float(Current_D) < float(Recommended_Distance)/float(3)) then 
-                Symptoms.Write_Peligro_Colision (True);
+            elsif (float(Current_D) < Recommended_Distance)then 
+                Symptoms.Write_Distancia_Insegura (True);
             else
                 Symptoms.Write_Distancia_Insegura (False);
                 Symptoms.Write_Distancia_Imprudente (False);
