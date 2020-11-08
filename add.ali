@@ -3,13 +3,12 @@ A -g
 P LC TF
 R nnvvrnnvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U add%b			add.adb			611071D5 PK IL
+U add%b			add.adb			7A342AA2 PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W driver%s		driver.adb		driver.ali
 W kernel%s		kernel.ads		kernel.ali
 W kernel.serial_output%s  kernel-serial_output.adb  kernel-serial_output.ali
-W pulse_interrupt%s	pulse_interrupt.adb	pulse_interrupt.ali
 W state%s		state.adb		state.ali
 W system%s		system.ads		system.ali
 W tools%s		tools.adb		tools.ali  ED
@@ -34,9 +33,9 @@ D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
 D add.ads		20201014171418 204085E0
-D add.adb		20201107160033 333C40F9
-D devices1.ads		20201107160200 15A31668
-D driver.ads		20201107160044 28184EB0
+D add.adb		20201108124702 11EB8FB2
+D devices3.ads		20201108105127 348FE7B2
+D driver.ads		20201108124911 283850B0
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -48,8 +47,7 @@ D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
 D priorities.ads	20201106052505 59853DC0
-D pulse_interrupt.ads	20201104193606 39938A04
-D state.ads		20201107160110 7E218A5D
+D state.ads		20201108124911 7E618A65
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47
@@ -88,13 +86,11 @@ X 24 kernel.ads
 36U9*Kernel 19|2r6 2r32
 X 29 kernel-serial_output.ads
 36U16*Serial_Output 19|2r13 2r39
-X 33 pulse_interrupt.ads
-5U9*pulse_interrupt 19|10r6 10r27
-X 34 state.ads
+X 33 state.ads
 6U9*State 19|8r6 8r17
-X 35 system.ads
+X 34 system.ads
 46U9*System 19|4r6 4r18
-X 58 tools.ads
+X 57 tools.ads
 6U9*tools 19|6r6 6r17
 13U15*Starting_Notice 19|22r5
 14U15*Finishing_Notice 19|23r5

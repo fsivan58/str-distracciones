@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnvvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U driver%b		driver.adb		2E50EC62 PK
+U driver%b		driver.adb		028E7F27 PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
@@ -11,7 +11,7 @@ W ada.real_time.delays%s  a-retide.adb		a-retide.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
-W devices1%s		devices1.adb		devices1.ali
+W devices3%s		devices3.adb		devices3.ali
 W kernel%s		kernel.ads		kernel.ali
 W kernel.serial_output%s  kernel-serial_output.adb  kernel-serial_output.ali
 W system%s		system.ads		system.ali
@@ -22,12 +22,12 @@ W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W tools%s		tools.adb		tools.ali  ED
 
-U driver%s		driver.ads		05F5F3D6 PK
+U driver%s		driver.ads		24F91C0C PK
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
-W devices1%s		devices1.adb		devices1.ali
+W devices3%s		devices3.adb		devices3.ali
 W priorities%s		priorities.ads		priorities.ali
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
@@ -52,9 +52,9 @@ D a-strunb.ads		20000718095948 23CE47B9
 D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
-D devices1.ads		20201107160200 15A31668
-D driver.ads		20201107160044 28184EB0
-D driver.adb		20201107160527 6FE6D851
+D devices3.ads		20201108105127 348FE7B2
+D driver.ads		20201108124911 283850B0
+D driver.adb		20201108124911 6234A4CE
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -93,105 +93,105 @@ X 1 ada.ads
 18U9*Ada 18|3r6 3r33 4r6 4r41 19|2r6 2r25 3r6 3r33 4r6 4r41
 X 8 a-reatim.ads
 43U13*Real_Time 19|2r10 2r29
-45O9*Time 19|16r29 47r29 71r29
-59U13*"+" 19|18r40 39r54 49r40 63r54 73r40 91r54
-89U13*Milliseconds 19|18r42 39r56 49r42 63r56 73r42 91r56
+45O9*Time 19|16r29 53r29 77r29
+59U13*"+" 19|18r40 45r54 55r40 69r54 79r40 97r54
+89U13*Milliseconds 19|18r42 45r56 55r42 69r56 79r42 97r56
 X 11 a-string.ads
 18U13*Strings 18|3r10 3r37 4r10 4r45 19|3r10 3r37 4r10 4r45
 X 13 a-strunb.ads
 43U21*Unbounded 18|3r18 3r45 4r18 4r53 19|3r18 3r45 4r18 4r53
-46R9*Unbounded_String 18|35r48 19|166r48
-60U13*To_Unbounded_String 19|177r51 178r55 179r57 180r59 181r55
+46R9*Unbounded_String 18|35r48 19|172r48
+60U13*To_Unbounded_String 19|183r51 184r55 185r57 186r59 187r55
 X 14 a-suteio.ads
 43U31*Text_IO 18|4r28 4r63 19|4r28 4r63
-51U14*Put 19|171r13
-X 17 devices1.ads
-7U9*devices1 18|2r6 2r20 19|8r6 8r20
-20O5*WCET_Display 19|172r29
-58N41*x 19|82r33 82r59
-58N43*y 19|83r25 83r47 84r25 84r47
-60A10*HeadPosition_Samples_Type 18|32r49 43r23 19|68r21 69r20 151r49
-63U15*Reading_HeadPosition 19|148r13
-70I10*Distance_Samples_Type 18|48r45 55r19 19|13r20 186r45
-72U15*Reading_Distance 19|193r13
-78I10*Speed_Samples_Type 18|51r42 56r16 19|14r20 46r16 201r42
-80U15*Reading_Speed 19|208r13
-86I10*Steering_Samples_Type 18|34r45 44r19 19|44r22 45r21 70r20 161r45
-88U15*Reading_Steering 19|158r13
-109U15*Display_Distance 19|198r13
-113U15*Display_Speed 19|213r13
+51U14*Put 19|177r13
+X 17 devices3.ads
+7U9*devices3 18|2r6 2r20 19|8r6 8r20
+20O5*WCET_Display 19|178r29
+58N41*x 19|88r34 88r62
+58N43*y 19|89r30 89r54 90r30 90r54
+60A10*HeadPosition_Samples_Type 18|32r49 43r23 19|74r21 75r20 157r49
+63U15*Reading_HeadPosition 19|154r13
+70I10*Distance_Samples_Type 18|48r45 55r19 19|13r20 192r45
+72U15*Reading_Distance 19|199r13
+78I10*Speed_Samples_Type 18|51r42 56r16 19|14r20 52r16 207r42
+80U15*Reading_Speed 19|214r13
+86I10*Steering_Samples_Type 18|34r45 44r19 19|50r22 51r21 76r20 167r45
+88U15*Reading_Steering 19|164r13
+109U15*Display_Distance 19|204r13
+113U15*Display_Speed 19|219r13
 X 18 driver.ads
 6U9*Driver 19|10b14
 8t10*Distance
 12t10*Steering
 16t10*Head
-20w15*Symptoms 19|27r17 29r17 31r17 33r17 34r17 35r17 53r13 55r13 58r17 59r18
-. 77r13 78r13 79r13 80r13 86r17 87r18
-21U19 Write_Head_Symptom 19|86r26 87r27 96b19
-21e39 Value 19|96b39 98r29
-22U19 Read_Head_Symptom 19|101b19
-22e38 Value 19|101b38 103r13
-23U19 Write_Distancia_Insegura 19|31r26 33r26 106b19
-23e45 Value 19|106b45 108r35
-24U19 Read_Distancia_Insegura 19|111b19
-24e44 Value 19|111b44 113r13
-25U19 Write_Distancia_Imprudente 19|29r26 34r26 116b19
-25e47 Value 19|116b47 118r37
-26U19 Read_Distancia_Imprudente 19|121b19
-26e46 Value 19|121b46 123r13
-27U19 Write_Peligro_Colision 19|27r26 35r26 126b19
-27e43 Value 19|126b43 128r33
-28U19 Read_Peligro_Colision 19|131b19
-28e42 Value 19|131b42 133r13
-29U19 Write_Steering_Symptom 19|58r26 59r27 136b19
-29e43 Value 19|136b43 138r33
-30U19 Read_Steering_Symptom 19|141b19
-30e42 Value 19|141b42 143r13
-31U19 Write_HeadPosition 19|77r22 146b19
-32U19 Read_HeadPosition 19|79r22 151b19
-32a38 Value 19|151b38 153r13
-33U19 Write_Steering 19|53r22 78r22 156b19
-34U19 Read_Steering 19|55r22 80r22 161b19
-34i34 Value 19|161b34 163r13
-35U19 Display_Symptom 19|166b19 177r34 178r38 179r40 180r42 181r38
-35R36 Symptom 19|166b36 171r18
-36U19 Show_Symptoms 19|175b19
-38e9 Head_Symptom 19|98r13 103r22 177r16
-39e9 Steering_Symptom 19|138r13 143r22 178r16
-40e9 Distancia_Insegura 19|108r13 113r22 179r16
-41e9 Distancia_Imprudente 19|118r13 123r22 180r16
-42e9 Peligro_Colision 19|128r13 133r22 181r16
-43a9 HeadPosition 19|148r34 153r22
-44i9 Steering 19|158r31 163r22
-47w15*Measures 19|21r13 22r13 23r13 24r13 54r13 56r13
-48U19 Read_Distance 19|23r22 186b19
-48i34 Value 19|186b34 188r13
-49U19 Write_Distance 19|21r22 191b19
-50U19 Show_Distance 19|196b19
-51U19 Read_Speed 19|24r22 56r22 201b19
-51i31 Value 19|201b31 203r13
-52U19 Write_Speed 19|22r22 54r22 206b19
-53U19 Show_Speed 19|211b19
-55i9 Distance 19|188r22 193r30 198r30
-56i9 Speed 19|203r22 208r27 213r27
+20w15*Symptoms 19|27r17 28r17 29r17 31r17 32r17 33r17 35r17 36r17 37r17 39r17
+. 40r17 41r17 59r13 61r13 64r17 65r18 83r13 84r13 85r13 86r13 92r17 93r18
+21U19 Write_Head_Symptom 19|92r26 93r27 102b19
+21e39 Value 19|102b39 104r29
+22U19 Read_Head_Symptom 19|107b19
+22e38 Value 19|107b38 109r13
+23U19 Write_Distancia_Insegura 19|28r26 32r26 35r26 39r26 112b19
+23e45 Value 19|112b45 114r35
+24U19 Read_Distancia_Insegura 19|117b19
+24e44 Value 19|117b44 119r13
+25U19 Write_Distancia_Imprudente 19|29r26 31r26 36r26 40r26 122b19
+25e47 Value 19|122b47 124r37
+26U19 Read_Distancia_Imprudente 19|127b19
+26e46 Value 19|127b46 129r13
+27U19 Write_Peligro_Colision 19|27r26 33r26 37r26 41r26 132b19
+27e43 Value 19|132b43 134r33
+28U19 Read_Peligro_Colision 19|137b19
+28e42 Value 19|137b42 139r13
+29U19 Write_Steering_Symptom 19|64r26 65r27 142b19
+29e43 Value 19|142b43 144r33
+30U19 Read_Steering_Symptom 19|147b19
+30e42 Value 19|147b42 149r13
+31U19 Write_HeadPosition 19|83r22 152b19
+32U19 Read_HeadPosition 19|85r22 157b19
+32a38 Value 19|157b38 159r13
+33U19 Write_Steering 19|59r22 84r22 162b19
+34U19 Read_Steering 19|61r22 86r22 167b19
+34i34 Value 19|167b34 169r13
+35U19 Display_Symptom 19|172b19 183r34 184r38 185r40 186r42 187r38
+35R36 Symptom 19|172b36 177r18
+36U19 Show_Symptoms 19|181b19
+38e9 Head_Symptom 19|104r13 109r22 183r16
+39e9 Steering_Symptom 19|144r13 149r22 184r16
+40e9 Distancia_Insegura 19|114r13 119r22 185r16
+41e9 Distancia_Imprudente 19|124r13 129r22 186r16
+42e9 Peligro_Colision 19|134r13 139r22 187r16
+43a9 HeadPosition 19|154r34 159r22
+44i9 Steering 19|164r31 169r22
+47w15*Measures 19|21r13 22r13 23r13 24r13 60r13 62r13
+48U19 Read_Distance 19|23r22 192b19
+48i34 Value 19|192b34 194r13
+49U19 Write_Distance 19|21r22 197b19
+50U19 Show_Distance 19|202b19
+51U19 Read_Speed 19|24r22 62r22 207b19
+51i31 Value 19|207b31 209r13
+52U19 Write_Speed 19|22r22 60r22 212b19
+53U19 Show_Speed 19|217b19
+55i9 Distance 19|194r22 199r30 204r30
+56i9 Speed 19|209r22 214r27 219r27
 X 19 driver.adb
-13i9 Current_D 23m37 26r23 28r26 30r26
+13i9 Current_D 23m37 26r23 30r26 34r26
 14i9 Current_V 24m34 25r45
-15f9 Recommended_Distance 25m13 26r42 28r45 30r39
-16O9 Siguiente_Instante 18m9 38r25 39m13 39r35
-44i9 Previous_S 52m13 57r16
-45i9 Current_S 52r27 55m37 57r29
-46i9 Speed 56m34 57r53
-47O9 Siguiente_Instante 49m9 62r25 63m13 63r35
-68a9 Previous_H 76m13 82r22 83r14 84r14
-69a9 Current_H 76r27 79m41 82r49 83r37 84r37
-70i9 Current_S 80m37 83r59 84r59
-71O9 Siguiente_Instante 73m9 90r25 91m13 91r35
+15f9 Recommended_Distance 25m13 26r42 30r45 34r39
+16O9 Siguiente_Instante 18m9 44r25 45m13 45r35
+50i9 Previous_S 58m13 63r16
+51i9 Current_S 58r27 61m37 63r29
+52i9 Speed 62m34 63r53
+53O9 Siguiente_Instante 55m9 68r25 69m13 69r35
+74a9 Previous_H 82m13 88r23 89r19 90r19
+75a9 Current_H 82r27 85m41 88r52 89r44 90r44
+76i9 Current_S 86m37 89r68 90r68
+77O9 Siguiente_Instante 79m9 96r25 97m13 97r35
 X 22 kernel.ads
 36U9*Kernel 19|1r6 1r32
 X 27 kernel-serial_output.ads
 36U16*Serial_Output 19|1r13 1r39
-41U14*Put 19|169r13 170r13
+41U14*Put 19|175r13 176r13
 X 30 priorities.ads
 2U9*Priorities 18|1r6 1r22
 5i5*Head_Priority 18|17r26
@@ -201,9 +201,9 @@ X 31 system.ads
 46U9*System 19|5r6 5r18
 X 52 tools.ads
 6U9*tools 19|7r6 7r17
-8O5*Big_Bang 19|18r31 49r31 73r31 168r27
-10U15*Current_Time 19|168r13
-13U15*Starting_Notice 19|20r13 51r13 75r13
-14U15*Finishing_Notice 19|37r13 61r13 89r13
-15U15*Execution_Time 19|172r13
+8O5*Big_Bang 19|18r31 55r31 79r31 174r27
+10U15*Current_Time 19|174r13
+13U15*Starting_Notice 19|20r13 57r13 81r13
+14U15*Finishing_Notice 19|43r13 67r13 95r13
+15U15*Execution_Time 19|178r13
 

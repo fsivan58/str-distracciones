@@ -1,5 +1,5 @@
 with Priorities; use Priorities;
-with Devices1; use Devices1;
+with devices; use devices;
 with Ada.Interrupts.Names;
 with System; use System;
 

@@ -5,7 +5,7 @@ with ada.strings.unbounded.text_io; use ada.strings.unbounded.text_io;
 with System; use System;
 
 with Tools; use Tools;
-with Devices1; use Devices1;
+with devices; use devices;
 
 package body Driver is
 
@@ -25,10 +25,16 @@ package body Driver is
             Recommended_Distance := float ((Current_V/10)**2);
             if (float(Current_D) < float(Recommended_Distance)/float(3)) then
                 Symptoms.Write_Peligro_Colision (True);
+                Symptoms.Write_Distancia_Insegura (False);
+                Symptoms.Write_Distancia_Imprudente (False);
             elsif (float(Current_D) < float(Recommended_Distance)/float(2)) then
                 Symptoms.Write_Distancia_Imprudente (True);
+                Symptoms.Write_Distancia_Insegura (False);
+                Symptoms.Write_Peligro_Colision (False);
             elsif (float(Current_D) < Recommended_Distance)then 
                 Symptoms.Write_Distancia_Insegura (True);
+                Symptoms.Write_Distancia_Imprudente (False);
+                Symptoms.Write_Peligro_Colision (False);
             else
                 Symptoms.Write_Distancia_Insegura (False);
                 Symptoms.Write_Distancia_Imprudente (False);
@@ -79,9 +85,9 @@ package body Driver is
             Symptoms.Read_HeadPosition (Current_H);
             Symptoms.Read_Steering (Current_S);
 
-            if ((abs Previous_H(x) > 30 and abs Current_H(x) > 30) or
-            (Previous_H(y) > 30 and Current_H(y) > 30 and Current_S > 30) or
-            (Previous_H(y) < 30 and Current_H(y) < 30 and Current_S < 30))
+            if (((abs Previous_H(x) > 30) and (abs Current_H(x) > 30)) or
+                ((Previous_H(y) > 30) and (Current_H(y) > 30) and (Current_S < 30)) or
+                ((Previous_H(y) < 30) and (Current_H(y) < 30) and (Current_S > 30)))
             then
                 Symptoms.Write_Head_Symptom (True);
             else Symptoms.Write_Head_Symptom (False);
