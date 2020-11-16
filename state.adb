@@ -12,7 +12,7 @@ package body State is
 
     task body Display is
         Siguiente_Instante: Time;
-    begin
+    begin -- 0,0876941
         Siguiente_Instante := Big_Bang + Milliseconds(1000);
         loop
             Starting_Notice ("Display");
@@ -34,7 +34,7 @@ package body State is
 		Speed: Speed_Samples_Type := 0;
 		Siguiente_Instante: Time;
         Mode: integer := 1;
-    begin
+    begin -- 0,0724875
         Siguiente_Instante := Big_Bang + Milliseconds(150);
         loop
             delay until Siguiente_Instante;
@@ -77,9 +77,10 @@ package body State is
         Peligro_Colision: Boolean;
         Head_Symptom: Boolean;
         Mode: integer := 1;
-    begin
+    begin -- 0,042447
         loop
             Interruption_Handler.Change_Mode;
+            Starting_Notice("Iniciando tarea esporadica");
 
             Operation_Mode.Read_Mode (Mode);
             Symptoms.Read_Peligro_Colision (Peligro_Colision);
@@ -87,7 +88,7 @@ package body State is
 
             if Mode = 1 and not Peligro_Colision then
                 Operation_Mode.Write_Mode (2);
-            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom then -- WCET
+            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom then 
                 Light (Off);
                 Operation_Mode.Write_Mode (3);
             elsif Mode = 3 then
@@ -96,6 +97,8 @@ package body State is
 
             Put (": MODE :");
             Put (Integer'Image(Mode));
+
+            Finishing_Notice("Finishing tarea esporadica");
         end loop;
     end Sporadic_Task;
 
@@ -103,7 +106,7 @@ package body State is
         procedure Write_Mode (Value: in integer) is
         begin
             Mode := Value;
-            Execution_Time(2);
+            Execution_Time(Milliseconds(2));
         end Write_Mode;
         procedure Read_Mode (Value: out integer) is
         begin
@@ -115,7 +118,7 @@ package body State is
         procedure Validate_Entry is
         begin
             Enter := True;
-            Execution_Time(2);
+            Execution_Time(Milliseconds(2));
         end Validate_Entry;
         entry Change_Mode when Enter is
         begin

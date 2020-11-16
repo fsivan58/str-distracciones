@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnvvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U state%b		state.adb		691F84B7 PK
+U state%b		state.adb		6A65FB83 PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.interrupts%s	a-interr.adb		a-interr.ali
@@ -20,7 +20,7 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W tools%s		tools.adb		tools.ali  ED
 
-U state%s		state.ads		05238DFC PK
+U state%s		state.ads		7507018A PK
 W ada%s			ada.ads			ada.ali
 W ada.interrupts%s	a-interr.adb		a-interr.ali
 W ada.interrupts.names%s  a-intnam.ads		a-intnam.ali
@@ -65,9 +65,9 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201113165159 59853DC0
+D priorities.ads	20201116220303 29A1B1B6
 D state.ads		20201113165159 74258DEC
-D state.adb		20201113165159 1A37C1A6
+D state.adb		20201116220420 194DBE92
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47
@@ -105,22 +105,22 @@ X 10 a-reatim.ads
 43U13*Real_Time 33|3r10 3r29
 45O9*Time 33|14r29 35r37
 59U13*"+" 33|16r40 24r54 38r40 41r54
-89U13*Milliseconds 33|16r42 24r56 38r42 41r56
+89U13*Milliseconds 33|16r42 24r56 38r42 41r56 109r28 121r28
 X 19 devices.ads
 7U9*devices 32|2r6 2r19 33|7r6 7r19
 78I10*Speed_Samples_Type 33|34r24
 130U15*Beep 33|53r17 56r17 58r17 61r17 65r17
 134N27*On 33|64r24 67r24
-134N31*Off 33|69r24 91r24
-135U15*Light 33|64r17 67r17 69r17 91r17
+134N31*Off 33|69r24 92r24
+135U15*Light 33|64r17 67r17 69r17 92r17
 143U15*Activate_Brake 33|62r17
 X 20 driver.ads
 6U9*Driver 33|8r6 8r18
-20w15*Symptoms 33|19r13 44r13 45r13 46r13 47r13 48r13 85r13 86r13
-22U19 Read_Head_Symptom 33|45r22 86r22
+20w15*Symptoms 33|19r13 44r13 45r13 46r13 47r13 48r13 86r13 87r13
+22U19 Read_Head_Symptom 33|45r22 87r22
 24U19 Read_Distancia_Insegura 33|46r22
 26U19 Read_Distancia_Imprudente 33|47r22
-28U19 Read_Peligro_Colision 33|48r22 85r22
+28U19 Read_Peligro_Colision 33|48r22 86r22
 30U19 Read_Steering_Symptom 33|44r22
 36U19 Show_Symptoms 33|19r22
 47w15*Measures 33|20r13 21r13 49r13
@@ -131,7 +131,7 @@ X 23 kernel.ads
 36U9*Kernel 33|2r6 2r32
 X 28 kernel-serial_output.ads
 36U16*Serial_Output 33|2r13 2r39
-41U14*Put 33|97r13 98r13
+41U14*Put 33|98r13 99r13
 X 31 priorities.ads
 2U9*Priorities 32|1r6 1r22
 4i5*Sporadic_Priority 32|17r26
@@ -142,16 +142,16 @@ X 32 state.ads
 8t10*Display
 12t10*Risks
 16t10*Sporadic_Task
-20w15*Operation_Mode 33|50r13 84r13 89r17 92r17 94r17
-21U19 Write_Mode 33|89r32 92r32 94r32 103b19
-21i31 Value 33|103b31 105r21
-22U19 Read_Mode 33|50r28 84r28 107b19
-22i30 Value 33|107b30 109r13
-24i9 Mode 33|105r13 109r22
+20w15*Operation_Mode 33|50r13 85r13 90r17 93r17 95r17
+21U19 Write_Mode 33|90r32 93r32 95r32 106b19
+21i31 Value 33|106b31 108r21
+22U19 Read_Mode 33|50r28 85r28 111b19
+22i30 Value 33|111b30 113r13
+24i9 Mode 33|108r13 113r22
 27w15*Interruption_Handler 33|82r13
-29U19 Validate_Entry 33|114b19 32|30r32
-31Y15 Change_Mode 33|82r34 118b15
-33e9 Enter 33|116r13 118r32 120r13
+29U19 Validate_Entry 30r32 33|118b19
+31Y15 Change_Mode 33|82r34 123b15
+33e9 Enter 33|120r13 123r32 125r13
 X 33 state.adb
 14O9 Siguiente_Instante 16m9 23r25 24m13 24r35
 29e17 Head_Symptom 45m41 52r47 55r16 57r19 60r50
@@ -162,15 +162,16 @@ X 33 state.adb
 34i17 Speed 49m34 55r46
 35O17 Siguiente_Instante 38m9 40r25 41m13 41r35
 36i9 Mode 50m39 52r30 55r33 57r36 60r37 63r44 66r42 68r19
-77e9 Peligro_Colision 85m45 88r33 90r36
-78e9 Head_Symptom 86m41 90r61
-79i9 Mode 84m39 88r16 90r19 93r19 98r32
+77e9 Peligro_Colision 86m45 89r33 91r36
+78e9 Head_Symptom 87m41 91r61
+79i9 Mode 85m39 89r16 91r19 94r19 99r32
 X 34 system.ads
 46U9*System 32|4r6 4r18 28r26 33|4r6 4r18
 117I12*Interrupt_Priority 32|28r33
 X 58 tools.ads
 6U9*tools 33|6r6 6r17
 8O5*Big_Bang 33|16r31 38r31
-13U15*Starting_Notice 33|18r13 43r13
-14U15*Finishing_Notice 33|22r13 72r13
+13U15*Starting_Notice 33|18r13 43r13 83r13
+14U15*Finishing_Notice 33|22r13 72r13 101r13
+15U15*Execution_Time 33|109r13 121r13
 
