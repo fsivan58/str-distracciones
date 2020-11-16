@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnnvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U add%b			add.adb			7A342AA2 PK IL
+U add%b			add.adb			40E5C86D PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W driver%s		driver.adb		driver.ali
@@ -33,9 +33,9 @@ D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
 D add.ads		20201014171418 204085E0
-D add.adb		20201108124702 11EB8FB2
-D devices3.ads		20201108105127 348FE7B2
-D driver.ads		20201108124911 283850B0
+D add.adb		20201113172050 11EB8FB2
+D devices.ads		20201113165159 48AB7E58
+D driver.ads		20201113171721 18ADB5F6
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -46,8 +46,8 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201106052505 59853DC0
-D state.ads		20201108124911 7E618A65
+D priorities.ads	20201113165159 59853DC0
+D state.ads		20201113165159 74258DEC
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47

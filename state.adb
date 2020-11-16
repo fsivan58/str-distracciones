@@ -57,7 +57,7 @@ package body State is
             elsif Head_Symptom and Mode < 3 then
                 Beep (2);
             end if;
-            if Peligro_Colision and Mode < 3 and Head_Symptom then
+            if Peligro_Colision and Mode < 3 and Head_Symptom then -- WCET
                 Beep (5);
                 Activate_Brake;
             elsif Distancia_Imprudente and Mode = 1 then
@@ -87,7 +87,7 @@ package body State is
 
             if Mode = 1 and not Peligro_Colision then
                 Operation_Mode.Write_Mode (2);
-            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom then
+            elsif Mode = 2 and not Peligro_Colision and not Head_Symptom then -- WCET
                 Light (Off);
                 Operation_Mode.Write_Mode (3);
             elsif Mode = 3 then
@@ -103,6 +103,7 @@ package body State is
         procedure Write_Mode (Value: in integer) is
         begin
             Mode := Value;
+            Execution_Time(2);
         end Write_Mode;
         procedure Read_Mode (Value: out integer) is
         begin
@@ -114,6 +115,7 @@ package body State is
         procedure Validate_Entry is
         begin
             Enter := True;
+            Execution_Time(2);
         end Validate_Entry;
         entry Change_Mode when Enter is
         begin

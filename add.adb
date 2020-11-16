@@ -7,7 +7,7 @@ with Tools; use Tools;
 with Driver; use Driver;
 with State; use State;
 
-with Pulse_Interrupt; use Pulse_Interrupt;
+-- with Pulse_Interrupt; use Pulse_Interrupt;
 
 package body add is
 

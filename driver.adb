@@ -35,7 +35,7 @@ package body Driver is
                 Symptoms.Write_Distancia_Insegura (True);
                 Symptoms.Write_Distancia_Imprudente (False);
                 Symptoms.Write_Peligro_Colision (False);
-            else
+            else -- WCET
                 Symptoms.Write_Distancia_Insegura (False);
                 Symptoms.Write_Distancia_Imprudente (False);
                 Symptoms.Write_Peligro_Colision (False);
@@ -60,7 +60,7 @@ package body Driver is
             Measures.Write_Speed;
             Symptoms.Read_Steering (Current_S);
             Measures.Read_Speed (Speed);
-            if Previous_S - Current_S > abs(20) and Speed > 40 then
+            if Previous_S - Current_S > abs(20) and Speed > 40 then -- WCET
                 Symptoms.Write_Steering_Symptom (True);
             else Symptoms.Write_Steering_Symptom (False);
             end if;
@@ -89,7 +89,7 @@ package body Driver is
                 ((Previous_H(y) > 30) and (Current_H(y) > 30) and (Current_S < 30)) or
                 ((Previous_H(y) < 30) and (Current_H(y) < 30) and (Current_S > 30)))
             then
-                Symptoms.Write_Head_Symptom (True);
+                Symptoms.Write_Head_Symptom (True); -- WCET
             else Symptoms.Write_Head_Symptom (False);
             end if;
             Finishing_Notice ("Head");
@@ -102,71 +102,85 @@ package body Driver is
         procedure Write_Head_Symptom (Value: in Boolean) is
         begin
             Head_Symptom := Value;
+            Execution_Time(6);
         end Write_Head_Symptom;
 
         procedure Read_Head_Symptom (Value: out Boolean) is
         begin
             Value := Head_Symptom;
+            Execution_Time(6);
         end Read_Head_Symptom;
 
         procedure Write_Distancia_Insegura (Value: in Boolean) is
         begin
             Distancia_Insegura := Value;
+            Execution_Time(6);
         end Write_Distancia_Insegura;
 
         procedure Read_Distancia_Insegura (Value: out Boolean) is
         begin
-	    Value := Distancia_Insegura;
+	        Value := Distancia_Insegura;
+            Execution_Time(6);
         end Read_Distancia_Insegura;
 
         procedure Write_Distancia_Imprudente (Value: in Boolean) is
         begin
             Distancia_Imprudente := Value;
+            Execution_Time(6);
         end Write_Distancia_Imprudente;
 
         procedure Read_Distancia_Imprudente (Value: out Boolean) is
         begin
             Value := Distancia_Imprudente;
+            Execution_Time(6);
         end Read_Distancia_Imprudente;
 
         procedure Write_Peligro_Colision (Value: in Boolean) is
         begin
             Peligro_Colision := Value;
+            Execution_Time(6);
         end Write_Peligro_Colision;
 
         procedure Read_Peligro_Colision (Value: out Boolean) is
         begin
             Value := Peligro_Colision;
+            Execution_Time(6);
         end Read_Peligro_Colision;
 
         procedure Write_Steering_Symptom (Value: in Boolean) is
         begin
             Steering_Symptom := Value;
+            Execution_Time(6);
         end Write_Steering_Symptom;
         
         procedure Read_Steering_Symptom (Value: out Boolean) is
         begin 
             Value := Steering_Symptom;
+            Execution_Time(6);
         end Read_Steering_Symptom;
 
         procedure Write_HeadPosition is
         begin
             Reading_HeadPosition(HeadPosition);
+            Execution_Time(6);
         end Write_HeadPosition; 
 
         procedure Read_HeadPosition (Value: out HeadPosition_Samples_Type) is
         begin
             Value := HeadPosition;
+            Execution_Time(6);
         end Read_HeadPosition;
 
         procedure Write_Steering is
         begin
             Reading_Steering (Steering);
+            Execution_Time(6);
         end Write_Steering;
 
         procedure Read_Steering (Value: out Steering_Samples_Type) is
         begin
             Value := Steering;
+            Execution_Time(6);
         end Read_Steering;
 
         procedure Display_Symptom (Symptom: in Unbounded_String) is
@@ -175,7 +189,7 @@ package body Driver is
             Put ("............# ");
             Put ("Symptom: ");
             Put (Symptom);
-            Execution_Time (WCET_Display);
+            Execution_Time(6);
         end Display_Symptom;
 
         procedure Show_Symptoms is
@@ -185,6 +199,7 @@ package body Driver is
             if Distancia_Insegura then Display_Symptom (To_Unbounded_String("DISTANCIA INSEGURA")); end if;
             if Distancia_Imprudente then Display_Symptom (To_Unbounded_String("DISTANCIA IMPRUDENTE")); end if;
             if Peligro_Colision then Display_Symptom (To_Unbounded_String("PELIGRO COLISION")); end if;
+            Execution_Time(6);
         end Show_Symptoms;
     end Symptoms;
 
@@ -192,31 +207,37 @@ package body Driver is
         procedure Read_Distance (Value: out Distance_Samples_Type) is
         begin
             Value := Distance;
+            Execution_Time(4);
         end Read_Distance;
     
         procedure Write_Distance is
         begin
             Reading_Distance(Distance);
+            Execution_Time(4);
         end Write_Distance;
 
         procedure Show_Distance is
         begin
             Display_Distance(Distance);
+            Execution_Time(4);
         end Show_Distance;
 
         procedure Read_Speed (Value: out Speed_Samples_Type) is
         begin
             Value := Speed;
+            Execution_Time(4);
         end Read_Speed;
 
         procedure Write_Speed is
         begin
             Reading_Speed(Speed);
+            Execution_Time(4);
         end Write_Speed;
 
         procedure Show_Speed is
         begin
             Display_Speed(Speed);
+            Execution_Time(4);
         end Show_Speed;
     end Measures;
 

@@ -3,14 +3,14 @@ A -g
 P LC TF
 R nnvvrnvvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U state%b		state.adb		4ECC685B PK
+U state%b		state.adb		691F84B7 PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.interrupts%s	a-interr.adb		a-interr.ali
 W ada.interrupts.names%s  a-intnam.ads		a-intnam.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.real_time.delays%s  a-retide.adb		a-retide.ali
-W devices3%s		devices3.adb		devices3.ali  ED
+W devices%s		devices.adb		devices.ali  ED
 W driver%s		driver.adb		driver.ali  ED
 W kernel%s		kernel.ads		kernel.ali
 W kernel.serial_output%s  kernel-serial_output.adb  kernel-serial_output.ali  ED
@@ -20,11 +20,11 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W tools%s		tools.adb		tools.ali  ED
 
-U state%s		state.ads		7343139F PK
+U state%s		state.ads		05238DFC PK
 W ada%s			ada.ads			ada.ali
 W ada.interrupts%s	a-interr.adb		a-interr.ali
 W ada.interrupts.names%s  a-intnam.ads		a-intnam.ali
-W devices3%s		devices3.adb		devices3.ali  ED
+W devices%s		devices.adb		devices.ali  ED
 W priorities%s		priorities.ads		priorities.ali
 W system%s		system.ads		system.ali
 W system.interrupts%s	s-interr.adb		s-interr.ali
@@ -53,8 +53,8 @@ D a-strunb.ads		20000718095948 23CE47B9
 D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
-D devices3.ads		20201108105127 348FE7B2
-D driver.ads		20201108124911 283850B0
+D devices.ads		20201113165159 48AB7E58
+D driver.ads		20201113171721 18ADB5F6
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -65,9 +65,9 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201106052505 59853DC0
-D state.ads		20201108124911 7E618A65
-D state.adb		20201108124911 7B11566F
+D priorities.ads	20201113165159 59853DC0
+D state.ads		20201113165159 74258DEC
+D state.adb		20201113165159 1A37C1A6
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47
@@ -106,8 +106,8 @@ X 10 a-reatim.ads
 45O9*Time 33|14r29 35r37
 59U13*"+" 33|16r40 24r54 38r40 41r54
 89U13*Milliseconds 33|16r42 24r56 38r42 41r56
-X 19 devices3.ads
-7U9*devices3 32|2r6 2r20 33|7r6 7r20
+X 19 devices.ads
+7U9*devices 32|2r6 2r19 33|7r6 7r19
 78I10*Speed_Samples_Type 33|34r24
 130U15*Beep 33|53r17 56r17 58r17 61r17 65r17
 134N27*On 33|64r24 67r24

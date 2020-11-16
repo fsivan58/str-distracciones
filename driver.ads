@@ -6,7 +6,7 @@ with ada.strings.unbounded.text_io; use ada.strings.unbounded.text_io;
 package Driver is
 
     task Distance is
-        pragma Priority (Distance_Priority);
+        pragma Priority (21);
     end Distance;
 
     task Steering is
