@@ -3,14 +3,14 @@ A -g
 P
 R nnnnrnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U priorities%s		priorities.ads		29A1B1B6 NE PK
+U priorities%s		priorities.ads		65090068 NE PK
 
-D priorities.ads	20201116220303 29A1B1B6
+D priorities.ads	20201117170601 65090068
 X 1 priorities.ads
 2U9*Priorities
-4i5*Sporadic_Priority
-5i5*Head_Priority
-6i5*Risk_Priority
+4i5*Head_Priority
+5i5*Risk_Priority
+6i5*Sporadic_Priority
 7i5*Distance_Priority
 8i5*Steering_Priority
 9i5*Display_Priority

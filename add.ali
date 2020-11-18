@@ -3,7 +3,7 @@ A -g
 P LC TF
 R nnvvrnnvnnnnvvvvnvvvvnvnvnnnnnvnnnnnnnnnvnn
 
-U add%b			add.adb			5BA18D22 PK IL
+U add%b			add.adb			5DB5F6B8 PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W driver%s		driver.adb		driver.ali
@@ -33,10 +33,10 @@ D a-strunb.ads		20000718095948 23CE47B9
 D a-suteio.ads		20000718095948 4205D177
 D a-tags.ads		20000718095948 45EF7E4E
 D a-textio.ads		20000718095948 2D24B708
-D add.ads		20201014171418 204085E0
-D add.adb		20201116220056 333C40F9
-D devices.ads		20201113165159 48AB7E58
-D driver.ads		20201113171721 18ADB5F6
+D add.ads		20201116221350 204085E0
+D add.adb		20201117173221 333C40F9
+D devices.ads		20201116221350 48AB7E58
+D driver.ads		20201117165511 4A46FE0D
 D interfac.ads		20000718095948 0357E00A
 D i-cstrea.ads		20000718095948 70A316EF
 D kernel.ads		20010312182047 56BBE4F1
@@ -47,9 +47,9 @@ D kernel-peripherals.ads  20010312182047 089544EF
 D kernel-serial_output.ads  20010312182047 16AD38F4
 D kernel-threads.ads	20010312182047 234DAE87
 D kernel-time.ads	20010312182047 7A57ECF4
-D priorities.ads	20201116220303 29A1B1B6
-D pulse_interrupt.ads	20201113165159 39938A04
-D state.ads		20201113165159 74258DEC
+D priorities.ads	20201117170601 65090068
+D pulse_interrupt.ads	20201116221350 39938A04
+D state.ads		20201117172059 20DABD8D
 D system.ads		20010312182047 2AE5BAFE
 D s-exctab.ads		20000718095948 7A25F5F9
 D s-ficobl.ads		20000718095949 0C03FD47
@@ -73,7 +73,7 @@ D s-tposen.ads		20010312182047 5865B402
 D s-tasres.ads		20000718095949 62B4C0AB
 D s-tarest.ads		20000718095949 1D177686
 D s-unstyp.ads		20000718095949 78AFB91D
-D tools.ads		20191007063732 7C34CB2C
+D tools.ads		20201116221350 7C34CB2C
 D unchconv.ads		20000718095949 72DC4539
 X 1 ada.ads
 18U9*Ada 19|3r6 3r25

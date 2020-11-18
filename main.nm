@@ -1488,8 +1488,6 @@
 0202f548 T full_name
 0203b874 T fwrite
 02001384 t gcc2_compiled.
-02001674 t gcc2_compiled.
-02006d88 t gcc2_compiled.
 02033f10 t gcc2_compiled.
 020341a4 t gcc2_compiled.
 02034294 t gcc2_compiled.
@@ -2053,9 +2051,9 @@
 02049010 D prioritiesS
 02049064 D priorities__display_priority
 0204905c D priorities__distance_priority
-02049054 D priorities__head_priority
-02049058 D priorities__risk_priority
-02049050 D priorities__sporadic_priority
+02049050 D priorities__head_priority
+02049054 D priorities__risk_priority
+02049058 D priorities__sporadic_priority
 02049060 D priorities__steering_priority
 0204bad8 D program_error
 02049020 D pulse_interruptB
