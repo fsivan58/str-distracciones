@@ -18,27 +18,31 @@ package body Driver is
         Siguiente_Instante := Big_Bang + Milliseconds(300);
         loop
             Starting_Notice ("Distance");
-            Measures.Write_Distance;
-            Measures.Write_Speed;
-            Measures.Read_Distance (Current_D);
-            Measures.Read_Speed (Current_V);
+            Measures.Read_Distance_Values (Current_D, Current_V);
+            -- Measures.Write_Distance;
+            -- Measures.Write_Speed;
+            -- Measures.Read_Distance (Current_D);
+            -- Measures.Read_Speed (Current_V);
             Recommended_Distance := float ((Current_V/10)**2);
             if (float(Current_D) < float(Recommended_Distance)/float(3000)) then
-                Symptoms.Write_Peligro_Colision (True);
-                Symptoms.Write_Distancia_Insegura (False);
-                Symptoms.Write_Distancia_Imprudente (False);
+                Symptoms.Write_Distance_Symptoms (True, False, False);
+                -- Symptoms.Write_Peligro_Colision (True);
+                -- Symptoms.Write_Distancia_Insegura (False);
+                -- Symptoms.Write_Distancia_Imprudente (False);
             elsif (float(Current_D) < float(Recommended_Distance)/float(2000)) then
-                Symptoms.Write_Distancia_Imprudente (True);
-                Symptoms.Write_Distancia_Insegura (False);
-                Symptoms.Write_Peligro_Colision (False);
-            elsif (float(Current_D) < Recommended_Distance)then
-                Symptoms.Write_Distancia_Insegura (True);
-                Symptoms.Write_Distancia_Imprudente (False);
-                Symptoms.Write_Peligro_Colision (False);
-            else
-                Symptoms.Write_Distancia_Insegura (False);
-                Symptoms.Write_Distancia_Imprudente (False);
-                Symptoms.Write_Peligro_Colision (False);
+                Symptoms.Write_Distance_Symptoms (False, True, False);
+                -- Symptoms.Write_Distancia_Imprudente (False);
+                -- Symptoms.Write_Distancia_Insegura (True);
+                -- Symptoms.Write_Peligro_Colision (False);
+            elsif (float(Current_D) < Recommended_Distance) then
+                Symptoms.Write_Distance_Symptoms (False, False, True);
+                -- Symptoms.Write_Distancia_Insegura (False);
+                -- Symptoms.Write_Distancia_Imprudente (False);
+                -- Symptoms.Write_Peligro_Colision (True);
+            else Symptoms.Write_Distance_Symptoms (False, False, False);
+                -- Symptoms.Write_Distancia_Insegura (False);
+                -- Symptoms.Write_Distancia_Imprudente (False);
+                -- Symptoms.Write_Peligro_Colision (False);
             end if;
             Finishing_Notice ("Distance");
             delay until Siguiente_Instante;
@@ -56,10 +60,12 @@ package body Driver is
         loop
             Starting_Notice ("Steering");
             Previous_S := Current_S;
-            Symptoms.Write_Steering;
-            Measures.Write_Speed;
-            Symptoms.Read_Steering (Current_S);
-            Measures.Read_Speed (Speed);
+            Symptoms.Read_Steering_Values (Current_S);
+            Measures.Read_Speed_Values (Speed);
+            -- Symptoms.Write_Steering;
+            -- Measures.Write_Speed;
+            -- Symptoms.Read_Steering (Current_S);
+            -- Measures.Read_Speed (Speed);
             if Previous_S - Current_S > abs(20) and Speed > 40 then
                 Symptoms.Write_Steering_Symptom (True);
             else Symptoms.Write_Steering_Symptom (False);
@@ -80,10 +86,11 @@ package body Driver is
         loop
             Starting_Notice ("Head");
             Previous_H := Current_H;
-            Symptoms.Write_HeadPosition;
-            Symptoms.Write_Steering;
-            Symptoms.Read_HeadPosition (Current_H);
-            Symptoms.Read_Steering (Current_S);
+            Symptoms.Read_Head_Values (Current_H, Current_S);
+            -- Symptoms.Write_HeadPosition;
+            -- Symptoms.Write_Steering;
+            -- Symptoms.Read_HeadPosition (Current_H);
+            -- Symptoms.Read_Steering (Current_S);
 
             if (((abs Previous_H(x) > 30) and (abs Current_H(x) > 30)) or
                 ((Previous_H(y) > 30) and (Current_H(y) > 30) and (Current_S < 30)) or
@@ -99,6 +106,51 @@ package body Driver is
     end Head;
 
     protected body Symptoms is
+        procedure Read_Head_Values (Current_H: out HeadPosition_Samples_Type; Current_S: out Steering_Samples_Type) is
+        begin
+            Reading_HeadPosition(HeadPosition);
+            Reading_Steering (Steering);
+            Current_H := HeadPosition;
+            Current_S := Steering;
+            Execution_Time(Milliseconds(6));
+        end Read_Head_Values;
+
+        procedure Write_Distance_Symptoms (Colision: in Boolean; Insegura: in Boolean; Imprudente: in Boolean) is
+        begin
+            Peligro_Colision := Colision;
+            Distancia_Insegura := Insegura;
+            Distancia_Imprudente := Imprudente;
+            Execution_Time(Milliseconds(4));
+        end Write_Distance_Symptoms;
+
+        procedure Read_Risks_Symptoms ( Volantazo: out Boolean;
+                                        Head: out Boolean;
+                                        Insegura: out Boolean;
+                                        Imprudente: out Boolean;
+                                        Colision: out Boolean) is
+        begin
+            Volantazo := Steering_Symptom;
+            Head := Head_Symptom;
+            Insegura := Distancia_Insegura;
+            Imprudente := Distancia_Imprudente;
+            Colision := Peligro_Colision;
+            Execution_Time(Milliseconds(8));
+        end Read_Risks_Symptoms;
+
+        procedure Read_Steering_Values (Current_S: out Steering_Samples_Type) is
+        begin
+            Reading_Steering (Steering);
+            Current_S := Steering;
+            Execution_Time(Milliseconds(3));
+        end Read_Steering_Values;
+
+        procedure Read_Sporadic_Symptoms (Colision: out Boolean; Head: out Boolean) is
+        begin
+            Colision := Peligro_Colision;
+            Head := Head_Symptom;
+            Execution_Time(Milliseconds(3));
+        end Read_Sporadic_Symptoms;
+
         procedure Write_Head_Symptom (Value: in Boolean) is
         begin
             Head_Symptom := Value;
@@ -189,7 +241,6 @@ package body Driver is
             Put ("............# ");
             Put ("Symptom: ");
             Put (Symptom);
-            Execution_Time(Milliseconds(2));
         end Display_Symptom;
 
         procedure Show_Symptoms is
@@ -199,11 +250,34 @@ package body Driver is
             if Distancia_Insegura then Display_Symptom (To_Unbounded_String("DISTANCIA INSEGURA")); end if;
             if Distancia_Imprudente then Display_Symptom (To_Unbounded_String("DISTANCIA IMPRUDENTE")); end if;
             if Peligro_Colision then Display_Symptom (To_Unbounded_String("PELIGRO COLISION")); end if;
-            Execution_Time(Milliseconds(6));
+            Execution_Time(Milliseconds(7));
         end Show_Symptoms;
     end Symptoms;
 
     protected body Measures is
+        procedure Read_Distance_Values (Current_D: out Distance_Samples_Type; Current_V: out Speed_Samples_Type) is
+        begin
+            Reading_Distance(Distance);
+            Reading_Speed(Speed);
+            Current_D := Distance;
+            Current_V := Speed;
+            Execution_Time(Milliseconds(8));
+        end Read_Distance_Values;
+
+        procedure Read_Speed_Values (Current_V: out Speed_Samples_Type) is
+        begin
+            Reading_Speed(Speed);
+            Current_V := Speed;
+            Execution_Time(Milliseconds(2));
+        end Read_Speed_Values;
+
+        procedure Show_Measures is
+        begin
+            Display_Distance(Distance);
+            Display_Speed(Speed);
+            Execution_Time(Milliseconds(3));
+        end Show_Measures;
+
         procedure Read_Distance (Value: out Distance_Samples_Type) is
         begin
             Value := Distance;
