@@ -12,7 +12,7 @@ package body State is
 
     task body Display is
         Siguiente_Instante: Time;
-    begin -- 0,0876941
+    begin
         Siguiente_Instante := Big_Bang + Milliseconds(1000);
         loop
             Starting_Notice ("Display");
@@ -34,7 +34,7 @@ package body State is
 		Speed: Speed_Samples_Type := 0;
 		Siguiente_Instante: Time;
         Mode: integer := 1;
-    begin -- 0,0724875
+    begin
         Siguiente_Instante := Big_Bang + Milliseconds(150);
         loop
             delay until Siguiente_Instante;
@@ -57,7 +57,7 @@ package body State is
             elsif Head_Symptom and Mode < 3 then
                 Beep (2);
             end if;
-            if Peligro_Colision and Mode < 3 and Head_Symptom then -- WCET
+            if Peligro_Colision and Mode < 3 and Head_Symptom then
                 Beep (5);
                 Activate_Brake;
             elsif Distancia_Imprudente and Mode = 1 then
@@ -68,7 +68,7 @@ package body State is
             elsif Mode /= 3 then
                 Light (Off);
             end if;
-            
+            Put_Line ("fin de risks");
             Finishing_Notice ("Risks");
         end loop;
     end Risks;
@@ -77,7 +77,7 @@ package body State is
         Peligro_Colision: Boolean;
         Head_Symptom: Boolean;
         Mode: integer := 1;
-    begin -- 0,042447
+    begin
         loop
             Interruption_Handler.Change_Mode;
             Starting_Notice("Iniciando tarea esporadica");

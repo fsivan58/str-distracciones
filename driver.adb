@@ -14,7 +14,7 @@ package body Driver is
         Current_V: Speed_Samples_Type := 0;
         Recommended_Distance: float;
         Siguiente_Instante: Time;
-    begin -- 0.077008000
+    begin
         Siguiente_Instante := Big_Bang + Milliseconds(300);
         loop
             Starting_Notice ("Distance");
@@ -51,7 +51,7 @@ package body Driver is
         Current_S : Steering_Samples_Type := 0;
         Speed: Speed_Samples_Type := 0;
         Siguiente_Instante: Time;
-    begin -- 0,055778400
+    begin
         Siguiente_Instante := Big_Bang + Milliseconds(350);
         loop
             Starting_Notice ("Steering");
@@ -75,7 +75,7 @@ package body Driver is
         Current_H: HeadPosition_Samples_Type := (+2, -2);
         Current_S: Steering_Samples_Type;
         Siguiente_Instante: Time;
-    begin -- 0,0544129
+    begin
         Siguiente_Instante := Big_Bang + Milliseconds(400);
         loop
             Starting_Notice ("Head");
