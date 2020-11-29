@@ -18,6 +18,7 @@ package Driver is
     end Head;
 
     protected Symptoms is
+	pragma Priority (Head_Priority);
         procedure Write_Head_Symptom (Value: in Boolean);
         procedure Read_Head_Symptom (Value: out Boolean);
         procedure Write_Distancia_Insegura (Value: in Boolean);
@@ -45,6 +46,7 @@ package Driver is
     end Symptoms;
 
     protected Measures is
+	pragma Priority (Risk_Priority);
         procedure Read_Distance (Value: out Distance_Samples_Type);
         procedure Write_Distance; 
         procedure Show_Distance;

@@ -18,6 +18,7 @@ package State is
     end Sporadic_Task;
 
     protected Operation_Mode is
+	pragma Priority (Sporadic_Priority);
         procedure Write_Mode (Value: in integer);
         procedure Read_Mode (Value: out integer);
     private

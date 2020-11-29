@@ -68,7 +68,6 @@ package body State is
             elsif Mode /= 3 then
                 Light (Off);
             end if;
-            Put_Line ("fin de risks");
             Finishing_Notice ("Risks");
         end loop;
     end Risks;
