@@ -1,3 +1,6 @@
+-- Gonzalo Martin Rodriguez
+-- Ivan Fernandez Samaniego
+
 with Priorities; use Priorities;
 with devices; use devices;
 with ada.strings.unbounded; use ada.strings.unbounded;
