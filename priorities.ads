@@ -1,3 +1,5 @@
+-- Gonzalo Martin Rodriguez
+-- Ivan Fernandez Samaniego
 
 package Priorities is
 

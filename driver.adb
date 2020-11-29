@@ -1,3 +1,6 @@
+-- Gonzalo Martin Rodriguez
+-- Ivan Fernandez Samaniego
+
 with Kernel.Serial_Output; use Kernel.Serial_Output;
 with Ada.Real_Time; use Ada.Real_Time;
 with ada.strings.unbounded; use ada.strings.unbounded;
