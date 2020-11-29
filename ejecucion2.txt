@@ -1,0 +1,142 @@
+
+ TSIM/ERC32 - remote SPARC simulator, version 1.0.10 (evaluation version)
+
+ Copyright (C) 2001, Gaisler Research - all rights reserved.
+ For latest updates, go to http://www.gaisler.com/
+ Comments or bug-reports to tsim@gaisler.com
+
+libreadline.so.3: cannot open shared object file: No such file or directory
+serial port A on stdin/stdout
+allocated 4096 K RAM memory
+allocated 2048 K ROM memory
+section: .text at 0x2000000, size 294112 bytes
+section: .data at 0x2047ce0, size 13804 bytes
+tsim> resuming at 0x02000000
+
+[ 0.002886700] >>> Head
+[ 0.034607900] --- Head
+[ 0.046864800] >>> Distance
+[ 0.100538100] --- Distance
+[ 0.114842800] >>> Steering
+[ 0.155537100] --- Steering
+[ 0.171158900] >>> Risks
+[ 0.197672300] >>> Display
+[ 0.218130500] ............# Distance:  95
+[ 0.251265200] ............# Speed:  60
+[ 0.281788200] --- Display
+[ 0.29558
+[ 0.300701500] >>> Distance
+[ 0.354540800] --- Distance
+[ 0.368845500] >>> Steering
+[ 0.401386200] >>> Head
+[ 0.433108900] --- Head
+[ 0.453025900] --- Steering7100] >>> Programa Principal
+[ 0.481667300] --- Programa Principa======> Interrupcion Externa 2 
+[ 0.518192200] >>> Iniciando tarea esporadica: MODE : 1
+[ 0.555274100] --- Finishing tarea esporadical
+[ 0.600421000] >>> Distance
+[ 0.654063000] --- Distance
+[ 0.700410700] >>> Steering
+[ 0.741075300] --- Steering
+[ 0.800410500] >>> Head
+[ 0.832135000] --- Head
+[ 0.900334700] >>> Distance
+[ 0.953985100] --- Distance======> Interrupcion Externa 2 
+[ 1.017942000] >>> Iniciando tarea esporadica
+[ 1.047704700] ............Light: _off_: MODE : 2
+[ 1.080008000] --- Finishing tarea esporadica
+[ 1.103559100] >>> Steering
+[ 1.144258200] --- Steering
+[ 1.158562800] >>> Display
+[ 1.179052100] ............# Distance:  80
+[ 1.201031300] >>> Head
+[ 1.232788900] --- Head
+[ 1.256250400] ............# Speed:  80
+[ 1.286881300] >>> Distance
+[ 1.340531200] --- Distance
+[ 1.354835800] --- Display
+[ 1.400410700] >>> Steering
+[ 1.441079000] --- Steering
+[ 1.500410500] >>> Distance
+[ 1.554058600] --- Distance
+[ 1.600410500] >>> Head
+[ 1.632137700] --- Head======> Interrupcion Externa 2 
+[ 1.717913000] >>> Iniciando tarea esporadica: MODE : 3
+[ 1.754996700] --- Finishing tarea esporadica
+[ 1.778548700] >>> Steering
+[ 1.803367500] >>> Distance
+[ 1.857016600] --- Distance
+[ 1.886618900] --- Steering
+[ 2.000419900] >>> Head
+[ 2.032145300] --- Head
+[ 2.044402800] >>> Display
+[ 2.064891600] ............# Distance:  65
+[ 2.098025800] ............# Speed:  85
+[ 2.128657400] >>> Distance
+[ 2.182306200] --- Distance
+[ 2.196611500] >>> Steering
+[ 2.237311000] --- Steering
+[ 2.251615600] --- Display
+[ 2.400420500] >>> Head
+[ 2.432146700] --- Head
+[ 2.444404100] >>> Distance
+[ 2.498084000] --- Distance
+[ 2.512388900] >>> Steering
+[ 2.553086000] --- Steering======> Interrupcion Externa 2 
+[ 2.617913200] >>> Iniciando tarea esporadica: MODE : 1
+[ 2.654995400] --- Finishing tarea esporadica
+[ 2.700410500] >>> Distance
+[ 2.754060700] --- Distance
+[ 2.800345000] >>> Head
+[ 2.832071100] --- Head
+[ 2.844327800] >>> Steering
+[ 2.885025800] --- Steering
+[ 3.000419900] >>> Distance
+[ 3.054068700] --- Distance
+[ 3.068374100] >>> Display
+[ 3.082197300] ............# Symptom: DISTANCIA IMPRUDENTE
+[ 3.119168100] ............# Distance:  30
+[ 3.152501400] ............# Speed:  100
+[ 3.183644300] >>> Steering
+[ 3.208518200] >>> Head
+[ 3.240244400] --- Head
+[ 3.267798100] --- Steering
+[ 3.282103000] --- Display
+[ 3.300410500] >>> Distance
+[ 3.354059500] --- Distance======> Interrupcion Externa 2 
+[ 3.517940700] >>> Iniciando tarea esporadica
+[ 3.547703400] ............Light: _off_: MODE : 2
+[ 3.580006100] --- Finishing tarea espor
+[ 3.600997100] >>> Head
+[ 3.632755000] --- Headadica
+[ 3.647572500] >>> Distance
+[ 3.701251400] --- Distance
+[ 3.715556800] >>> Steering
+[ 3.756255800] --- Steering
+[ 3.850423300] >>> Steering
+[ 3.891090200] ---
+[ 3.900787200] >>> Distance
+[ 3.954468200] --- Distance Steering
+[ 4.000419900] >>> Head
+[ 4.032144400] --- Head
+[ 4.044401300] >>> Display
+[ 4.058225700] ............# Symptom: CABEZA INCLINADA
+[ 4.086385300] ............# Symptom: DISTANCIA IMPRUDENTE
+[ 4.123356400] ............# Distance:  20
+[ 4.156490600] ............# Speed:  110
+[ 4.187526200] --- Displa
+[ 4.200806900] >>> Distance
+[ 4.254489100] --- Distance
+[ 4.268794200] >>> Steering======> Interrupcion Externa 2 
+[ 4.321111100] >>> Iniciando tarea esporadica: MODE : 3
+[ 4.358195600] --- Finishing tarea esporadica
+[ 4.387254500] --- Steerin
+[ 4.401048000] >>> Head
+[ 4.432805000] --- Headgy
+[ 4.500410700] >>> Distance
+[ 4.554247300] --- Distance
+[ 4.568552300] >>> Steering
+[ 4.609251400] --- Steering
+Interrupt!
+ Stopped at time 50350109 (3.596e+00 s)
+tsim> 

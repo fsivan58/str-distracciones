@@ -18,8 +18,6 @@ package body State is
             Starting_Notice ("Display");
             Symptoms.Show_Symptoms;
             Measures.Show_Measures;
-            -- Measures.Show_Distance;
-            -- Measures.Show_Speed;
             Finishing_Notice ("Display");
             delay until Siguiente_Instante;
             Siguiente_Instante := Siguiente_Instante + Milliseconds(1000);
@@ -43,11 +41,6 @@ package body State is
 
             Starting_Notice ("Risks");
             Symptoms.Read_Risks_Symptoms (Volantazo, Head_Symptom, Distancia_Insegura, Distancia_Imprudente, Peligro_Colision);
-            -- Symptoms.Read_Steering_Symptom (Volantazo);
-            -- Symptoms.Read_Head_Symptom (Head_Symptom);
-            -- Symptoms.Read_Distancia_Insegura (Distancia_Insegura);
-            -- Symptoms.Read_Distancia_Imprudente (Distancia_Imprudente);
-            -- Symptoms.Read_Peligro_Colision (Peligro_Colision);
             Measures.Read_Speed (Speed);
             Operation_Mode.Read_Mode (Mode);
 
@@ -85,8 +78,6 @@ package body State is
 
             Operation_Mode.Read_Mode (Mode);
             Symptoms.Read_Sporadic_Symptoms (Peligro_Colision, Head_Symptom);
-            -- Symptoms.Read_Peligro_Colision (Peligro_Colision);
-            -- Symptoms.Read_Head_Symptom (Head_Symptom);
 
             if Mode = 1 and not Peligro_Colision then
                 Operation_Mode.Write_Mode (2);
