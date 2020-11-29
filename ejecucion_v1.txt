@@ -1,0 +1,146 @@
+
+ TSIM/ERC32 - remote SPARC simulator, version 1.0.10 (evaluation version)
+
+ Copyright (C) 2001, Gaisler Research - all rights reserved.
+ For latest updates, go to http://www.gaisler.com/
+ Comments or bug-reports to tsim@gaisler.com
+
+libreadline.so.3: cannot open shared object file: No such file or directory
+serial port A on stdin/stdout
+allocated 4096 K RAM memory
+allocated 2048 K ROM memory
+section: .text at 0x2000000, size 298416 bytes
+section: .data at 0x2048db0, size 13804 bytes
+tsim> resuming at 0x02000000
+
+[ 0.002886700] >>> Head
+[ 0.059898100] --- Head
+[ 0.072155600] >>> Distance
+[ 0.144394500] --- Distance
+[ 0.158699800] >>> Steering
+[ 0.221766700] --- Steering
+[ 0.237389300] >>> Risks
+[ 0.276758100] ............Light: _off_
+[ 0.301932500] --- Risks
+[ 0.314701700] >>> Risks
+[ 0.354302500] ............Light: _off_
+[ 0.379287600] --- Risks
+[ 0.392056800] >
+[ 0.400761000] >>> Head
+[ 0.458022700] --- Head
+[ 0.470279500] >>> Risks======> Interrupcion Externa 2 
+[ 0.527395000] ............Light: _off_
+[ 0.552379800] --- Risks
+[ 0.565149300] >>> Iniciando tarea esporadica: MODE
+[ 0.600949100] >>> Risks
+[ 0.640348700] ............Light: _off_
+[ 0.665333500] --- Risks : 1
+[ 0.680150600] --- Finishing tarea esporadica>> Distance
+[ 0.754118500] >>> Risks
+[ 0.793488000
+[ 0.800624700] >>> Head
+[ 0.857670400] --- Head] ............Light: _off_
+[ 0.887775000] --- Risks
+[ 0.903649400] >>> Risks
+[ 0.943018700] ............Light: _off_
+[ 0.968185300] --- Risks
+[ 0.989965500] --- D======> Interrupcion Externa 2 
+[ 1.018274900] >>> Iniciando tarea esporadica
+[ 1
+[ 1.050785800] >>> Risks
+[ 1.090185200] ............Light: _off_
+[ 1.115170200] --- Risks.048768600] ............Light: _off_: MODE : 2
+[ 1.158230400] --- Finishing tarea esporadicaistance
+[ 1.185366300] >>> Distance
+[ 1.219292600] >>> Head
+[ 1.276309200] --- Head
+[ 1.291488000] >>> Risks
+[ 1.330861100] --- Risks
+[ 1.357033400] >>> Risks
+[ 1.396406500] --- Risks
+[ 1.429690700] --- Distance
+[ 1.443996200] >>> Distance
+[ 1.503137200] >>> Risks
+[ 1.542510300] --- Risks
+[ 1.567905600] --- Distance
+[ 1.582210400] >>> Distance
+[ 1.616126500] >>> Head
+[ 1.673330500] --- Head
+[ 1.688441200] >>> Risk======> Interrupcion Externa 2 s
+[ 1.745759600] --- Risks
+[ 1.758528200] >>> Iniciando tarea esporadica: MODE : 3
+[ 1.7963
+[ 1.800988500] >>> Risks
+[ 1.840388500] ............Light: _off_
+[ 1.865373100] --- Risks81000] --- Finishing tarea esporadica
+[ 1.931447100] --- Distance
+[ 1.94575
+[ 1.950871800] >>> Risks
+[ 1.990442400] ....
+[ 2.000651300] >>> Head
+[ 2.057697700] --- Head........Light: _off_
+[ 2.084735100] --- Risks2300] >
+[ 2.101087700] >>> Risks
+[ 2.144682404] ............Light: _off_
+[ 2.165473000] --- Risks>> Distance
+[ 2.241784400] --
+[ 2.250970000] >>> Risks
+[ 2.290368700] ............Light: ^ON^
+[ 2.314841600] --- Risks- Distance
+[ 2.332730900] >>> Distance
+[ 2.405283300] >>> Head
+[ 2.462299400] --- Head
+[ 2.474556900] >>> Risks
+[ 2.513956000] ............Light: ^ON^
+[ 2.538429700] --- Risks
+[ 2.551198400] >>> Risks
+[ 2.590597900] ....======> Interrupcion Externa 2 ........Light: ^ON^
+[ 2.632502000] --- Risks
+[ 2.645271200] >>> Iniciando tarea esporadica: MODE : 1
+[ 2.683119800] --- Finishing tarea
+[ 2.701039500] >>> Risks
+[ 2.740439500] ............Light: _off_
+[ 2.765424800] --- Risks esporadica
+[ 2.783825800] --- Distance
+[ 2.
+[ 2.800721500] >>> Head
+[ 2.857911200] --- Head
+[ 2.870168200] >>> Risks
+[ 2.909568100] ............Light: _off_
+[ 2.934553400] --- Risks798162000] >>> Distance
+[ 3.004068800] >>> Risks
+[ 3.043437500] ............Light: _off_
+[ 3.068422100] --- Risks
+[ 3.093884900] --- Distance
+[ 3.108189600] >>> Distance
+[ 3.159501100] >>> Risks
+[ 3
+[ 3.200886700] >>> Head
+[ 3.257934600] --- Head.198870000] ............Light: _off_
+[ 3.293159400] --- Risks
+[ 3.305928900] >>> Risks
+[ 3.345327800] ............Light: _off_
+[ 3.370312400] --- Risks
+[ 3.403597500] --- Distance
+[ 3.417903000] >>> Distance
+[ 3.455358400] >>> Risks
+[ 3.4947276======> Interrupcion Externa 2 00] ............Light: _off_
+[ 3.537138600] --- Risks
+[ 3.549907300] >>> Iniciando tarea esporadica
+[ 3.580432900] ............Light: _off_
+[ 3.600882300] >>> Head
+[ 3.657930300] --- Head
+[ 3.670187000] >>> Risks
+[ 3.709593100] ............%BEEEEEEP 3
+[ 3.734079000] ............Light: _off_
+[ 3.759063600] --- Risks
+[ 3.771832700] >>> Risks
+[ 3.811237400] ............%BEEEEEEP 3
+[ 3.835722500] ............Light: _off_
+[ 3.860707100] --- Risks: MODE : 2
+[ 3.885304400] --- Finishing 
+[ 3.900664000] >>> Risks
+[ 3.940067700] --- Riskstarea esporadica
+[ 3.99556
+[ 4.000653100] >>> Head
+[ 4.057915800] --- Head
